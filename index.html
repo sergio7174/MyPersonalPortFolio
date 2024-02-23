@@ -1,0 +1,3012 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <!-- font awesome 6 cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+
+    <!-- Entire page google font cdn -->
+    <link href="https://fonts.googleapis.com/css2?family=Nova+Round&display=swap" rel="stylesheet">
+
+    <!-- intro img google font cdn -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <!-- about me heading google font cdn -->
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+
+    <!-- tag names google font cdn -->
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+
+    <!-- counter text google font cdn-->
+    <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300&display=swap" rel="stylesheet">
+    
+    <!-- bootstrap 5.2.3 cdn-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!----Para el carousel ------------->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    
+    <!---- jquery 3.7.1 CDN ------>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    
+    <link rel="stylesheet" href="styles.css">
+    
+    <link rel="stylesheet" href="first.css">
+   
+    
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>My Portfolio</title>
+
+    <script>
+
+// FULL PAGE ANIMATION (JQUERY)
+
+
+$(document).ready(function()
+	{
+		$(window).scroll(function(){
+			var positiontop=$(document).scrollTop();
+			// console.log(positiontop);
+
+			if ((positiontop>325)&&(positiontop<400))
+			{	
+				$("#bio").addClass("cutout_anim");
+			}
+
+			if ((positiontop>20)&&(positiontop<50))
+			{	
+				$("#counter_img_div").addClass("counter_img_animation");
+			}
+
+			if ((positiontop>25)&&(positiontop<50))
+			{	
+				$("#counter1").addClass("counter1_anim");
+				$("#counter2").addClass("counter2_anim");
+				$("#counter3").addClass("counter3_anim");
+				$("#counter4").addClass("counter4_anim");
+			}
+
+			if((positiontop>380)&&(positiontop<480))
+			{
+				$("#biotext_1").addClass("biotext1_anim");
+				$("#biotext_2").addClass("biotext2_anim");
+			}
+
+			if((positiontop>1650)&&(positiontop<1800))
+			{
+				$("#abt_me").addClass("abt_me_anim");
+			}
+
+			if((positiontop>3050)&&(positiontop<3200))
+			{
+				$("#project1").addClass("project1_anim");
+				$("#project2").addClass("project2_anim");
+				$("#project3").addClass("project3_anim");
+			}
+
+			if((positiontop>3750)&&(positiontop<3900))
+			{
+				$("#footer_img").addClass("footer_img_anim");
+				$("#footer_text").addClass("footer_text_anim");
+			}
+		})
+	})
+
+
+
+    </script>
+
+  </head>
+<body class="opening_page">
+
+
+    <div class="container-fluid  mt-2 pb-0" style="overflow:hidden">
+
+    <nav >
+
+
+
+    <div class="row" id="page_top" style="overflow :hidden" >
+        <div class="col-md-10 offset-md-1 mt-3 navbar_bg" >
+
+            <nav class="navbar navbar-expand-lg w-100">
+            <div class="container-fluid">
+                <a href="#"> <img src='imgs/logo.jpg' alt="" class="logo_size img-fluid"/> </a>
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<h5 style="color: white">  Select Lenguage: </h5>
+
+                <div class="d-flex flex-column flex-wrap">
+                    <div>
+                     <a href="homeSpanish.html" > 
+                        <img src='imgs/Flag_of_Venezuela.png' alt="" class="logo_size img-fluid " style="cursor: pointer; margin-top: -1em;"/> </a>
+                 </div>
+                 <div>
+                 <h5 class="text-center mt-3" style="color: white" hidden>Español</h5>
+                 </div>
+                </div>
+                 
+             
+                <div class="d-flex flex-column flex-wrap">
+                    <div>
+                        <a href="/home" > 
+                            <img src='imgs/EEUU FLAT.png' alt="" class="logo_size img-fluid border border-3 border-light" style="cursor: pointer; margin-top: 1em; margin-left: 2em;"/>
+                        </a>
+                 </div>
+                 <div>
+                 <h5 class="text-center mt-3" style="color: white; margin-left: 2.3em;">English</h5>
+                 </div>
+                </div>
+               
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+
+
+                 
+
+                    <div class="collapse offset-md-4 navbar-collapse" id="collapsibleNavbar">
+
+                       <!-- <ul class="navbar-nav me-auto mb-2 mb-lg-0"> -->
+                        
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                            <li class="nav-item">
+                            <a class="nav-link nav_text btn btn_effect" href="#abt_me"> About Me </a>
+                            </li>
+                            
+                            <li class="nav-item">
+                            <a class="nav-link nav_text btn btn_effect" href="#" data-bs-toggle="modal" data-bs-target="#contactModal" onClick={contact_alert}> Contact Me </a>
+                            </li>
+                            
+                            <li class="nav-item">
+                            <a class="nav-link nav_text btn btn_effect" href="#project"> My Projects </a>
+                            </li>
+                        </ul>
+                    </div>
+            </div>
+            </nav>
+        </div>
+
+
+    </div>
+
+ 
+
+    <div id="myNav" class="overlay">
+
+        <a href="javascript:void(0)" class="closebtn" onClick={closeNav}>&times;</a>
+
+        <div class="overlay-content">
+        <a href="#" data-bs-toggle="modal" data-bs-target="#contactModal" class="btn_effect">Contact Me</a>
+        <a href="#abt_me" class="btn_effect">About Me</a>
+        <a href="#project" class="btn_effect">Projects</a>
+        </div>
+
+    </div>
+
+
+
+</nav>
+
+
+<!------ openingpage section ----------------------------->
+
+<div class="row-sm-3 mt-5 mb-1 pt-5">
+
+    <!--------------------------------- First Section ---------------------------->
+
+    <div class="container-fluid d-flex flex-row align-content-between">
+    <div class="container-fluid d-flex flex-column ">
+    <div class="container-fluid d-flex flex-column FirstSectionPosition">
+
+
+
+        
+
+    <div class="flex flex-row  items-center lg:text-lg text-base text-gray-400 container-fluid">
+        <p class="text-xs italic lg:text-sm font-code text-code">&lt;p&gt;</p>
+        <p class="">This is</p>
+        <p class="text-xs italic lg:text-sm font-code text-code">&lt;/p&gt;</p>
+    </div>
+
+    
+        <div class=" flex flex-col  2xl:text-7xl lg:text-6xl md:text-5xl text-4xl text-white font-bold container-fluid">
+            <p class="text-xs italic lg:text-sm font-code text-code">&lt;h1&gt;</p>
+            <div class="flex pl-6 container-fluid" > 
+                <span class="transition-all cursor-pointer hover:text-code hover:scale-125"
+                style="font-size: 4.5vw !important;">S</span>
+                <span class="transition-all cursor-pointer hover:text-code hover:scale-125" style="font-size: 4.5vw !important;">e</span>
+                <span class="transition-all cursor-pointer hover:text-code hover:scale-125" style="font-size: 4.5vw !important;">r</span>
+                <span class="transition-all cursor-pointer hover:text-code hover:scale-125" style="font-size: 4.5vw !important;">g</span>
+                <span class="transition-all cursor-pointer hover:text-code hover:scale-125" style="font-size: 4.5vw !important;">i</span>
+                <span class="transition-all cursor-pointer hover:text-code hover:scale-125" style="font-size: 4.5vw !important;">o</span>
+                <span class="transition-all cursor-pointer hover:text-code hover:scale-125" style="font-size: 4.5vw !important;">&nbsp;</span>
+                 <span class="transition-all cursor-pointer hover:text-code hover:scale-125"
+                 style="font-size: 4.5vw">M</span>
+                 <span class="transition-all cursor-pointer hover:text-code hover:scale-125"
+                 style="font-size: 4.5vw">o</span>
+                 <span class="transition-all cursor-pointer hover:text-code hover:scale-125"
+                 style="font-size: 4.5vw">n</span>
+                 <span class="transition-all cursor-pointer hover:text-code hover:scale-125"
+                 style="font-size: 4.5vw">c</span>
+                 <span class="transition-all cursor-pointer hover:text-code hover:scale-125"
+                 style="font-size: 4.5vw">a</span> 
+                 <span class="transition-all cursor-pointer hover:text-code hover:scale-125"
+                 style="font-size: 4.5vw">d</span>
+                 <span class="transition-all cursor-pointer hover:text-code hover:scale-125"
+                 style="font-size: 4.5vw">a</span> 
+             </div>
+             <p class="text-xs italic lg:text-sm font-code text-code">&lt;/h1&gt;</p>
+         </div>
+   
+
+
+
+
+    
+        <div class="flex flex-row  items-center 2xl:text-4xl lg:text-3xl text-2xl text-gray-400 container-fluid">
+            <p class="text-xs italic lg:text-sm font-code text-code">&lt;h3&gt;</p>
+            <p class="">Full-Stack Developer</p>
+            <p class="text-xs italic lg:text-sm font-code text-code">&lt;/h3&gt;</p>
+        </div>
+    
+    </div>
+<!------------------------------------First Section End Block ---------------->
+
+    <div class="col-lg-5 offset-md-1 intro mb-2 mx-auto text-center">
+
+
+
+        <!--Hi, <br /> I'm Sergio Moncada,-->
+        <br/>
+        <div class="morph_cont">
+            <div class="morph_word">Full Stack Developer</div>
+            <div class="morph_word">Front End Developer</div>
+            <div class="morph_word">Back End Developer</div>
+            <div class="morph_word">Desktop Developer</div>
+            <div class="morph_word">Graphic Designer</div>
+            <div class="morph_word">Content Creator video </div>
+            <div class="morph_word">Content Creator audio </div>
+      
+           
+        </div>
+        <br/>
+        <p style="color: blanchedalmond;">I build interactive websites that run <br /> across platforms & devices.</p>
+        
+    </div>
+  
+
+    </div> <!---End Block two first div -->
+   
+
+    <div class="col-md-4  mb-5 text-center offset-md-1 mx-auto container-fluid">
+        <img src='imgs/FOTOMIA005.jpg'alt="" class="mifoto_size img-fluid img-thumbnail"/>
+        <h4  style="color:white ; margin-right: 7em;" >System Eng. Sergio G. Moncada</h4>
+    </div>
+  
+</div> <!--- End Block First section and Photo ----------------------->
+
+<!------------------GOAL SECTION  ----------------------------------------->
+
+<div class=" transition-all md:w-4/12 -rotate-12 hover:rotate-6 positionGoal" >
+    <img  src="imgs/goal.png" alt="" class="border-2 rounded-md shadow-2xl border-sec shadow-black "
+      style="min-width: 25vh; "/>
+    
+</div>
+
+<!------------------END BLOCK GOAL SECTION  ------------------------------->
+
+
+</div>
+
+
+
+</div> <!------ openingpage section END BLOCK ----------------------------->
+
+
+<!--------------------------- COUNTER section ----------------------------->
+
+<div class="container-fluid py-3 counter_container" style="overflow: hidden">
+
+    <div class="row">
+
+        <div class='counter_img_cont mx-auto' id='counter_img_div'>
+            <img src='imgs/float_img1.png' alt='counter_image' class='counter_img_size' />
+        </div>
+
+        <div class='col-md-8 mx-auto d-flex flex-wrap' style="overflow:hidden">
+
+            <div class='counter mx-auto mt-3 counter_text text-center' id='counter1'>
+               
+                <p> <i class="fa-solid fa-clock" style="fontSize:45"></i> </p>
+                <h3 class="count counter_text">12,000+</h3> 
+                <p> Working Hours </p>
+            
+            </div>
+
+            <div class='counter mx-auto mt-3 counter_text text-center' id='counter2'>
+
+                <p> <i class="fa-solid fa-code" style="fontSize:45"></i> </p> 
+                <h3 class="count counter_text">55,000+</h3>
+                <p> Lines Of Code </p>
+
+            </div>
+
+            <div class='counter mx-auto mt-3 counter_text text-center' id='counter3'>
+
+                <p> <i class="fa-solid fa-mug-saucer" style="fontSize:45"></i> </p>
+                <h3 class="count counter_text">500+</h3>
+                <p> Cups of Coffee </p>
+
+            </div>
+
+            <div class='counter mx-auto mt-3 counter_text text-center' id='counter4'>
+
+                <p> <i class="fa-solid fa-cloud-moon" style="fontSize:45"></i> </p>
+                <h3 class="count counter_text">600+</h3>
+                <p>  Sleepless Nights </p>
+
+            </div>
+
+        </div>                    
+
+    </div>
+
+</div>
+
+
+
+<!--------------------------- COUNTER section END BLOCK ------------------->
+<!--------------------------- bio section  -------*************------------>
+
+<div class="container-fluid p-0 bio_text_cont" style="overflow:hidden">
+
+    <div class="row cutout_box">
+        <h1 class="cutout_text" id="bio">MY BIO</h1>
+    </div>
+
+    <div class="row p-5">
+
+        <div class="col-lg-6 mx-auto text-center bio1_container bio_text" id="biotext_1">
+            
+                    <h2><mark class="h2">Web</mark> 
+                    <mark class="h2">Developer</mark> <br /> 
+                    <mark class="h2">Front End Developer</mark> <br>
+                    <mark class="h2">Back End Developer</mark>
+                    
+                    </h2>
+
+            <div class="text-center py-0"><img src='imgs/bio_img.png' alt="" class="bio_img_size" /></div>
+
+        </div>
+
+        <div class="col-lg-5 mx-auto bio_text_2 text-center" id="biotext_2">
+            
+        <h4 class="tag_name mb-3"> bio</h4>
+
+            I'm a <b>Full Stack web developer</b> based in <b>Valencia, Venezuela.</b> With a speciality in <b>Front End Development</b>. I possess a vast array of knowledge in many different front end,back end  and desktop languages, responsive frameworks and databases management systems. My objective is simply to be the best web developer that I can be and to contribute to the technology industry. <br /><br />
+
+            Although I'm very familiar with using frameworks, my websites are primarily hand-coded using <b>HTML5, CSS3, Bootstrap, JavaScript: React,  Redux, Angular & Jquery, for FrontEnd, and NodeJS, Express for Backend .</b> <br /><br /> 
+
+            With a strong emphasis on <b>"Progressive Enhancement"</b>, I look for creative ways to push the boundaries of website development without compromising on browser support while following best code practices. <br /><br />
+
+            In a quest for always keeping <b>myself updated</b>, I read books and attend seminars & meetups.
+
+        <h4 class="tag_name mb-3"> /bio </h4>
+
+        <button type="button" class="cv_button w-75 mt-4" 
+        title="SHOW CV">
+                <a href= './pdf_files/cur_sergio_eng.pdf' target = "_blank">  
+                    Curriculum Vitae (PDF) <i class="fa-solid fa-download ms-2"></i>
+                </a>
+        </button>
+        
+        </div>
+
+    </div>
+</div>
+
+ <!--------------------------- bio section  END BLOCK *********------------>   
+<!-----------------------------ABTME SECTION BEGIN BLOCK ------------------>
+
+<div class="container-fluid abtme_bg pb-5" style="overflow:hidden" id="abt_me">
+
+    <!------------------------ heading start --------------------->
+            <div class="row">
+                <div class="col-md-5 mx-auto text-center abt_me_heading abt_me_anim" >
+                    ABOUT ME
+                </div>
+            </div>
+    <!------------------------ heading end ---------------------->
+    
+
+</div>  
+
+<div class="row">
+    <div class="col-md-10 mx-auto d-flex flex-wrap mt-2 mb-4 justify-content-center bio_tabs">
+
+
+<div data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
+
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark rounded-4">
+      <div class="container-fluid">
+        <ul class="navbar-nav">
+          <li class="nav-item tabs active flex-item mx-auto tablinks">
+            <a class="nav-link" href="#section1">MY SKILLS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#section2">EDUCATION</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#section3">EXPERIENCE</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#section3">EXTRA SKILLS</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    
+
+    <!---- SKILLS BLOCK BEGINING ---------------------------------------------->
+   
+    <!----First line, Three Options ------------->
+
+
+
+    <div id="section1" class="d-flex flex-wrap rounded-5 mb-2" style="padding:100px 20px; background-color: rgb(11, 51, 70);;">
+      
+
+      <div class="d-flex text-white flex-wrap">    
+
+             <!----First Option -------------------------->
+        <div class="p-2  flex-fill">
+       
+            <h2 class="text-lg text-gray-400 flex items-center gap-x-2 group hover:text-white transition-all font-code cursor-pointer z-50" style="
+            font-size: 1.8ex;">
+            <div class="h-[5px] w-1 rounded-full bg-sec "></div>
+            <span class="transition-all text-code group-hover:text-sub" > &lt; </span>
+            MARKUP / STYLING LANGUAGE
+        <span class="transition-all text-code group-hover:text-sub"> /&gt;</span>
+    </h2>
+
+        </div>  <!----First Option END BLOCK-------------------------->
+
+ <!---- SEcond Option -------------------------->   
+<div class="p-2 flex-fill" style="display: inline" >
+
+           <div class="d-flex flex-row ">
+
+           <div><p class="skillsStyleText"  >HTML</p></div>
+           &nbsp; &nbsp;
+           <div><img src='imgs/html.png' alt="" class="img-fluid rounded" 
+            style="height: 4em; width: 4em; margin-top: -1.3em;" /> </div>
+        </div>
+</div> <!---- Second Option END BLOCK-------------------------->
+
+
+
+     <!---- Third Option -------------------------->   
+<div class="p-2 flex-fill" style="display: inline" >
+
+    <div class="d-flex flex-row">
+
+    <div><p class="skillsStyleText"  >CSS3</p></div>
+    &nbsp; &nbsp;
+    <div><img src='imgs/css.png' alt="" class="img-fluid rounded" 
+     style="height: 4em; width: 4em; margin-top: -1.3em;" /> </div>
+ </div>
+</div> <!---- Third Option END BLOCK-------------------------->
+
+ <!---- 4th Option -------------------------->   
+ <div class="p-2 flex-fill" style="display: inline" >
+
+    <div class="d-flex flex-row ">
+
+    <div><p class="skillsStyleText"  >SASS</p></div>
+    &nbsp; &nbsp;
+    <div>
+        <img src='imgs/sass.png' alt="" class="img-fluid rounded" 
+     style="height: 4em; width: 4em; margin-top: -1.3em;" /> 
+     
+    </div>
+ </div>
+</div> <!---- Third Option END BLOCK-------------------------->
+</div> <!---- End of First Line SKILLs ------------------------------------------------>
+
+
+<!--- Second LINE Block Begining ------------------------------------------------------>
+<div class="d-flex text-white mt-5 flex-wrap">    
+
+    <!----First Option -------------------------->
+<div class="p-2  flex-fill">
+
+   <h2 class="text-lg text-gray-400 flex items-center gap-x-2 group hover:text-white transition-all font-code cursor-pointer z-50" style="
+   font-size: 1.8ex;">
+   <div class="h-[5px] w-1 rounded-full bg-sec "></div>
+   <span class="transition-all text-code group-hover:text-sub"> &lt; </span>
+   CSS FRAMEWORK
+<span class="transition-all text-code group-hover:text-sub"> /&gt;</span>
+</h2>
+
+</div>  <!----First Option END BLOCK-------------------------->
+
+<!---- SEcond Option -------------------------->   
+<div class="p-2 flex-fill" style="display: inline" >
+
+  <div class="d-flex flex-row ">
+
+  <div><p class="skillsStyleText"  >BOOTSTRAP 5</p></div>
+  &nbsp; &nbsp;
+  <div><img src='imgs/bootstrap.png' alt="" class="img-fluid rounded" 
+   style="height: 4em; width: 4em; margin-top: -1.3em;" /> </div>
+</div>
+</div> <!---- Second Option END BLOCK-------------------------->
+
+
+
+<!---- Third Option -------------------------->   
+<div class="p-2 flex-fill" style="display: inline" >
+
+<div class="d-flex flex-row ">
+
+<div><p class="skillsStyleText"  >MATERIALIZE</p></div>
+&nbsp; &nbsp;
+<div><img src='imgs/materialize.png' alt="" class="img-fluid rounded" 
+style="height: 4em; width: 4em; margin-top: -1.3em;" /> </div>
+</div>
+</div> <!---- Third Option END BLOCK-------------------------->
+
+<!---- 4th Option -------------------------->   
+<div class="p-2 flex-fill" style="display: inline" >
+
+<div class="d-flex flex-row ">
+
+<div><p class="skillsStyleText"  >TAILWIND</p></div>
+&nbsp; &nbsp;
+<div><img src='imgs/Tailwind css.png' alt="" class="img-fluid rounded" 
+style="height: 4em; width: 4em; margin-top: -1.3em;" /> </div>
+</div>
+</div> <!---- Third Option END BLOCK-------------------------->
+
+
+</div> <!---- End of 2da Line SKILLs ------------------------------------------------>
+<!--- Second LINE Block End ------------------------------------------------------>
+
+
+<!--- 3th LINE Block Begining ------------------------------------------------------>
+<div class="d-flex text-white mt-5 flex-wrap">    
+
+    <!----First Option -------------------------->
+<div class="p-2  flex-fill">
+
+   <h2 class="text-lg text-gray-400 flex items-center gap-x-2 group hover:text-white transition-all font-code cursor-pointer z-50" style="
+   font-size: 1.8ex;">
+   <div class="h-[5px] w-1 rounded-full bg-sec "></div>
+   <span class="transition-all text-code group-hover:text-sub"> &lt; </span>
+   PROGRAMMING LANGUAGE
+<span class="transition-all text-code group-hover:text-sub"> /&gt;</span>
+</h2>
+
+</div>  <!----First Option END BLOCK-------------------------->
+
+<!---- SEcond Option -------------------------->   
+<div class="p-2 flex-fill" style="display: inline" >
+
+  <div class="d-flex flex-row ">
+
+  <div><p class="skillsStyleText"  >JAVASCRIPT</p></div>
+  &nbsp; &nbsp;
+  <div><img src='imgs/javascript.png' alt="" class="img-fluid rounded" 
+   style="height: 4em; width: 4em; margin-top: -1.3em;" /> </div>
+</div>
+</div> <!---- Second Option END BLOCK-------------------------->
+
+
+
+<!---- Third Option -------------------------->   
+<div class="p-2 flex-fill" style="display: inline" >
+
+<div class="d-flex flex-row ">
+
+<div><p class="skillsStyleText"  >TYPESCRIPT</p></div>
+&nbsp; &nbsp;
+<div><img src='imgs/typescript02.png' alt="" class="img-fluid rounded" 
+style="height: 4em; width: 4em; margin-top: -1.3em;" /> </div>
+</div>
+</div> <!---- Third Option END BLOCK-------------------------->
+
+
+
+
+</div> <!---- End of 3th Line SKILLs ------------------------------------------------>
+<!--- 3th LINE Block End ------------------------------------------------------>
+
+<!--- 4th LINE Block Begining ------------------------------------------------------>
+<div class="d-flex text-white mt-5 flex-wrap">    
+
+    <!----First Option -------------------------->
+<div class="p-2  flex-fill">
+
+   <h2 class="text-lg text-gray-400 flex items-center gap-x-2 group hover:text-white transition-all font-code cursor-pointer z-50" style="
+   font-size: 1.8ex;">
+   <div class="h-[5px] w-1 rounded-full bg-sec "></div>
+   <span class="transition-all text-code group-hover:text-sub"> &lt; </span>
+   JAVASCRIPT FRAMEWORKS
+<span class="transition-all text-code group-hover:text-sub"> /&gt;</span>
+</h2>
+
+</div>  <!----First Option END BLOCK-------------------------->
+
+<!---- SEcond Option -------------------------->   
+<div class="p-2 flex-fill" style="display: inline" >
+
+  <div class="d-flex flex-row ">
+
+  <div><p class="skillsStyleText"  >REACT</p></div>
+  &nbsp; &nbsp;
+  <div><img src='imgs/react.png' alt="" class="img-fluid rounded" 
+   style="height: 4em; width: 4em; margin-top: -1.3em;" /> </div>
+</div>
+</div> <!---- Second Option END BLOCK-------------------------->
+
+
+
+<!---- Third Option -------------------------->   
+<div class="p-2 flex-fill" style="display: inline" >
+
+<div class="d-flex flex-row ">
+
+<div><p class="skillsStyleText"  >NEXT</p></div>
+&nbsp; &nbsp;
+<div><img src='imgs/next02.jpeg' alt="" class="img-fluid rounded" 
+style="height: 4em; width: 4em; margin-top: -1.3em;" /> </div>
+</div>
+</div> <!---- Third Option END BLOCK-------------------------->
+
+<!---- 4TH Option -------------------------->   
+<div class="p-2 flex-fill" style="display: inline" >
+
+    <div class="d-flex flex-row ">
+    
+    <div><p class="skillsStyleText"  >REACT NATIVE</p></div>
+    &nbsp; &nbsp;
+    <div><img src='imgs/REACT-NATIVE03.png' alt="" class="img-fluid rounded" 
+    style="height: 4em; width: 4em; margin-top: -1.3em;" /> </div>
+    </div>
+    </div> <!---- Third Option END BLOCK-------------------------->
+
+
+<!---- 5TH Option -------------------------->   
+<div class="p-2 flex-fill" style="display: inline" >
+
+    <div class="d-flex flex-row ">
+    
+    <div><p class="skillsStyleText"  >REDUX-TOOLKIT</p></div>
+    &nbsp; &nbsp;
+    <div><img src='imgs/redux-toolkit.png' alt="" class="img-fluid rounded" 
+    style="height: 4em; width: 4em; margin-top: -1.3em;" /> </div>
+    </div>
+    </div> <!---- Third Option END BLOCK-------------------------->
+
+
+
+
+</div> <!---- End of 4th Line SKILLs ------------------------------------------------>
+<!--- 4th LINE Block End ------------------------------------------------------>
+
+
+<!--- 5th LINE Block Begining ------------------------------------------------------>
+<div class="d-flex text-white mt-5 flex-wrap">    
+
+    <!----First Option -------------------------->
+<div class="p-2  flex-fill">
+
+   <h2 class="text-lg text-gray-400 flex items-center gap-x-2 group hover:text-white transition-all font-code cursor-pointer z-50" style="
+   font-size: 1.8ex;">
+   <div class="h-[5px] w-1 rounded-full bg-sec "></div>
+   <span class="transition-all text-code group-hover:text-sub"> &lt; </span>
+   JAVASCRIPT FRAMEWORKS II
+<span class="transition-all text-code group-hover:text-sub"> /&gt;</span>
+</h2>
+
+</div>  <!----First Option END BLOCK-------------------------->
+
+
+
+<!---- Third Option -------------------------->   
+<div class="p-2 flex-fill" style="display: inline" >
+
+<div class="d-flex flex-row ">
+
+<div><p class="skillsStyleText"  >ANGULAR</p></div>
+&nbsp; &nbsp;
+<div><img src='imgs/angular.png' alt="" class="img-fluid rounded" 
+style="height: 4em; width: 4em; margin-top: -1.3em;" /> </div>
+</div>
+</div> <!---- Third Option END BLOCK-------------------------->
+
+<!---- 4TH Option -------------------------->   
+<div class="p-2 flex-fill" style="display: inline" >
+
+    <div class="d-flex flex-row ">
+    
+    <div><p class="skillsStyleText"  >NODEJS</p></div>
+    &nbsp; &nbsp;
+    <div><img src='imgs/node.png' alt="" class="img-fluid rounded" 
+    style="height: 4em; width: 4em; margin-top: -1.3em;" /> </div>
+    </div>
+    </div> <!---- Third Option END BLOCK-------------------------->
+
+
+<!---- 5TH Option -------------------------->   
+<div class="p-2 flex-fill" style="display: inline" >
+
+    <div class="d-flex flex-row ">
+    
+    <div><p class="skillsStyleText"  >JQUERY</p></div>
+    &nbsp; &nbsp;
+    <div><img src='imgs/jquery.png' alt="" class="img-fluid rounded" 
+    style="height: 4em; width: 4em; margin-top: -1.3em;" /> </div>
+    </div>
+    </div> <!---- Third Option END BLOCK-------------------------->
+
+
+
+
+</div> <!---- End of 5th Line SKILLs ------------------------------------------------>
+<!--- 5th LINE Block End ------------------------------------------------------>
+
+<!--- 6th LINE Block Begining ------------------------------------------------------>
+<div class="d-flex text-white mt-5 flex-wrap">    
+
+    <!----First Option -------------------------->
+<div class="p-2  flex-fill">
+
+   <h2 class="text-lg text-gray-400 flex items-center gap-x-2 group hover:text-white transition-all font-code cursor-pointer z-50" style="
+   font-size: 1.8ex;">
+   <div class="h-[5px] w-1 rounded-full bg-sec "></div>
+   <span class="transition-all text-code group-hover:text-sub"> &lt; </span>
+   NODEJS FRAMEWORKS AND LIBS
+<span class="transition-all text-code group-hover:text-sub"> /&gt;</span>
+</h2>
+
+</div>  <!----1th Option END BLOCK--------------------------> 
+
+<!---- 2TH Option -------------------------->   
+<div class="p-2 flex-fill" style="display: inline" >
+
+    <div class="d-flex flex-row ">
+    
+    <div><p class="skillsStyleText"  >EXPRESS</p></div>
+    &nbsp; &nbsp;
+    <div><img src='imgs/express.png' alt="" class="img-fluid rounded" 
+    style="height: 4em; width: 4em; margin-top: -1.3em;" /> </div>
+    </div>
+    </div> <!---- 2TH Option END BLOCK-------------------------->
+
+<!---- 3TH Option -------------------------->   
+<div class="p-2 flex-fill" style="display: inline" >
+
+    <div class="d-flex flex-row ">
+    
+    <div><p class="skillsStyleText"  >MONGOOSE</p></div>
+    &nbsp; &nbsp;
+    <div><img src='imgs/mongoose.png' alt="" class="img-fluid rounded" 
+    style="height: 4em; width: 4em; margin-top: -1.3em;" /> </div>
+    </div>
+    </div> <!---- 3TH Option END BLOCK-------------------------->
+
+<!---- 4TH Option -------------------------->   
+<div class="p-2 flex-fill" style="display: inline" >
+
+    <div class="d-flex flex-row ">
+    
+    <div><p class="skillsStyleText"  >PASSTPORT</p></div>
+    &nbsp; &nbsp;
+    <div><img src='imgs/PASSPORT.png' alt="" class="img-fluid rounded" 
+    style="height: 4em; width: 4em; margin-top: -1.3em;" /> </div>
+    </div>
+    </div> <!---- 4TH Option END BLOCK-------------------------->
+
+
+</div> <!--- end of 6th line-->
+
+
+<!--- 7th LINE Block Begining ------------------------------------------------------>
+<div class="d-flex text-white mt-5 flex-wrap">    
+
+    <!----First Option -------------------------->
+<div class="p-2  flex-fill">
+
+   <h2 class="text-lg text-gray-400 flex items-center gap-x-2 group hover:text-white transition-all font-code cursor-pointer z-50" style="
+   font-size: 1.8ex;">
+   <div class="h-[5px] w-1 rounded-full bg-sec "></div>
+   <span class="transition-all text-code group-hover:text-sub"> &lt; </span>
+   NODEJS FRAMEWORKS AND LIBS II
+<span class="transition-all text-code group-hover:text-sub"> /&gt;</span>
+</h2>
+
+</div>  <!----1th Option END BLOCK--------------------------> 
+
+<!---- 2TH Option -------------------------->   
+<div class="p-2 flex-fill" style="display: inline" >
+
+    <div class="d-flex flex-row ">
+    
+    <div><p class="skillsStyleText"  >CORS</p></div>
+    &nbsp; &nbsp;
+    <div><img src='imgs/CORS.jpeg' alt="" class="img-fluid rounded" 
+    style="height: 4em; width: 4em; margin-top: -1.3em;" /> </div>
+    </div>
+    </div> <!---- 2TH Option END BLOCK-------------------------->
+
+<!---- 3TH Option -------------------------->   
+<div class="p-2 flex-fill" style="display: inline" >
+
+    <div class="d-flex flex-row ">
+    
+    <div><p class="skillsStyleText"  >MULTER</p></div>
+    &nbsp; &nbsp;
+    <div><img src='imgs/MULTER.png' alt="" class="img-fluid rounded" 
+    style="height: 4em; width: 4em; margin-top: -1.3em;" /> </div>
+    </div>
+    </div> <!---- 3TH Option END BLOCK-------------------------->
+
+<!---- 4TH Option -------------------------->   
+<div class="p-2 flex-fill" style="display: inline" >
+
+    <div class="d-flex flex-row ">
+    
+    <div><p class="skillsStyleText"  >COOKIE PARSER</p></div>
+    &nbsp; &nbsp;
+    <div><img src='imgs/COOKIE-PARSER01.png' alt="" class="img-fluid rounded" 
+    style="height: 4em; width: 4em; margin-top: -1.3em;" /> </div>
+    </div>
+    </div> <!---- 4TH Option END BLOCK-------------------------->
+
+
+</div> <!--- end of 7th line-->
+
+<!---------------------------------------------------------------------------->
+
+<!--- 11th LINE Block Begining ------------------------------------------------------>
+
+
+<div class="d-flex text-white mt-5 flex-wrap">    
+
+    <!----First Option -------------------------->
+<div class="p-2  flex-fill">
+
+   <h2 class="text-lg text-gray-400 flex items-center gap-x-2 group hover:text-white transition-all font-code cursor-pointer z-50" style="
+   font-size: 1.8ex;">
+   <div class="h-[5px] w-1 rounded-full bg-sec "></div>
+   <span class="transition-all text-code group-hover:text-sub"> &lt; </span>
+   TYPESCRIPT
+<span class="transition-all text-code group-hover:text-sub"> /&gt;</span>
+</h2>
+
+</div>  <!----1th Option END BLOCK--------------------------> 
+
+<!---- 2TH Option -------------------------->   
+<div class="p-2 flex-fill" style="display: inline" >
+
+    <div class="d-flex flex-row ">
+    
+    <div><p class="skillsStyleText"  >TYPESCRIPT-REACT</p></div>
+    &nbsp; &nbsp;
+    <div><img src='imgs/typescript-react002.png' alt="" class="img-fluid rounded" 
+    style="height: 4em; width: 4em; margin-top: -1.3em;" /> </div>
+    </div>
+    </div> <!---- 2TH Option END BLOCK-------------------------->
+
+<!---- 3TH Option -------------------------->   
+<div class="p-2 flex-fill" style="display: inline" >
+
+    <div class="d-flex flex-row ">
+    
+    <div><p class="skillsStyleText"  >TYPESCRIPT-ANGULAR</p></div>
+    &nbsp; &nbsp;
+    <div><img src='imgs/typescript-angular.jpeg' alt="" class="img-fluid rounded" 
+    style="height: 4em; width: 4em; margin-top: -1.3em;" /> </div>
+    </div>
+    </div> <!---- 3TH Option END BLOCK-------------------------->
+
+<!---- 4TH Option -------------------------->   
+<div class="p-2 flex-fill" style="display: inline" >
+
+    <div class="d-flex flex-row ">
+    
+    <div><p class="skillsStyleText"  >TYPESCRIPT-NODE</p></div>
+    &nbsp; &nbsp;
+    <div><img src='imgs/typescript-nodejs01.png' alt="" class="img-fluid rounded" 
+    style="height: 4em; width: 4em; margin-top: -1.3em;" /> </div>
+    </div>
+    </div> <!---- 4TH Option END BLOCK-------------------------->
+
+
+</div> <!--- end of 11th line-->
+<!---------------------------------------------------------------------------->
+
+<!--- 8th LINE Block Begining ------------------------------------------------------>
+<div class="d-flex text-white mt-5 flex-wrap">    
+
+    <!----First Option -------------------------->
+<div class="p-2  flex-fill">
+
+   <h2 class="text-lg text-gray-400 flex items-center gap-x-2 group hover:text-white transition-all font-code cursor-pointer z-50" style="
+   font-size: 1.8ex;">
+   <div class="h-[5px] w-1 rounded-full bg-sec "></div>
+   <span class="transition-all text-code group-hover:text-sub"> &lt; </span>
+   PACKAGE MANAGER
+<span class="transition-all text-code group-hover:text-sub"> /&gt;</span>
+</h2>
+
+</div>  <!----1th Option END BLOCK--------------------------> 
+
+<!---- 2TH Option -------------------------->   
+<div class="p-2 flex-fill" style="display: inline" >
+
+    <div class="d-flex flex-row ">
+    
+    <div><p class="skillsStyleText"  >NPM</p></div>
+    &nbsp; &nbsp;
+    <div><img src='imgs/npm.png' alt="" class="img-fluid rounded" 
+    style="height: 4em; width: 4em; margin-top: -1.3em;" /> </div>
+    </div>
+    </div> <!---- 2TH Option END BLOCK-------------------------->
+
+<!---- 2TH Option -------------------------->   
+<div class="p-2 flex-fill" style="display: inline" >
+
+    <div class="d-flex flex-row ">
+    
+    <div><p class="skillsStyleText"  >YARN</p></div>
+    &nbsp; &nbsp;
+    <div><img src='imgs/yarn02.png' alt="" class="img-fluid rounded" 
+    style="height: 4em; width: 4em; margin-top: -1.3em;" /> </div>
+    </div>
+    </div> <!---- 2TH Option END BLOCK-------------------------->
+
+<!---- 3TH Option -------------------------->   
+<div class="p-2 flex-fill" style="display: inline" >
+
+    <div class="d-flex flex-row ">
+    
+    <div><p class="skillsStyleText"  ></p></div>
+    &nbsp; &nbsp;
+    <div><img src='imgs/yarn02.png' alt="" class="img-fluid rounded" 
+    style="height: 4em; width: 4em; margin-top: -1.3em;" hidden/> </div>
+    </div>
+    </div> <!---- 3TH Option END BLOCK-------------------------->
+
+</div> <!--- end of 8th line-->
+
+<!---------------------------------------------------------------------------->
+<!--- 9th LINE Block Begining ------------------------------------------------------>
+
+
+<div class="d-flex text-white mt-5 flex-wrap">    
+
+    <!----First Option -------------------------->
+<div class="p-2  flex-fill">
+
+   <h2 class="text-lg text-gray-400 flex items-center gap-x-2 group hover:text-white transition-all font-code cursor-pointer z-50" style="
+   font-size: 1.8ex;">
+   <div class="h-[5px] w-1 rounded-full bg-sec "></div>
+   <span class="transition-all text-code group-hover:text-sub"> &lt; </span>
+   DATABASE MANAGEMENT
+<span class="transition-all text-code group-hover:text-sub"> /&gt;</span>
+</h2>
+
+</div>  <!----1th Option END BLOCK--------------------------> 
+
+<!---- 2TH Option -------------------------->   
+<div class="p-2 flex-fill" style="display: inline" >
+
+    <div class="d-flex flex-row ">
+    
+    <div><p class="skillsStyleText"  >MONGO DB</p></div>
+    &nbsp; &nbsp;
+    <div><img src='imgs/mongo.png' alt="" class="img-fluid rounded" 
+    style="height: 4em; width: 4em; margin-top: -1.3em;" /> </div>
+    </div>
+    </div> <!---- 2TH Option END BLOCK-------------------------->
+
+<!---- 3TH Option -------------------------->   
+<div class="p-2 flex-fill" style="display: inline" >
+
+    <div class="d-flex flex-row ">
+    
+    <div><p class="skillsStyleText"  >SQL</p></div>
+    &nbsp; &nbsp;
+    <div><img src='imgs/sql.png' alt="" class="img-fluid rounded" 
+    style="height: 4em; width: 4em; margin-top: -1.3em;" /> </div>
+    </div>
+</div> <!---- 3TH Option END BLOCK-------------------------->
+<!---- 4TH Option -------------------------->   
+<div class="p-2 flex-fill" style="display: inline" >
+
+    <div class="d-flex flex-row ">
+    
+    <div><p class="skillsStyleText"  >FIREBASE</p></div>
+    &nbsp; &nbsp;
+    <div><img src='imgs/firebase01.webp' alt="" class="img-fluid rounded" 
+    style="height: 4em; width: 4em; margin-top: -1.3em;" /> </div>
+    </div>
+</div> <!---- 4TH Option END BLOCK-------------------------->
+
+</div> <!--- end of 9th line-->
+<!---------------------------------------------------------------------------->
+
+<!--- 12th LINE Block Begining ------------------------------------------------------>
+
+
+<div class="d-flex text-white mt-5 flex-wrap">    
+
+    <!----First Option -------------------------->
+<div class="p-2  flex-fill">
+
+   <h2 class="text-lg text-gray-400 flex items-center gap-x-2 group hover:text-white transition-all font-code cursor-pointer z-50" style="
+   font-size: 1.8ex;">
+   <div class="h-[5px] w-1 rounded-full bg-sec "></div>
+   <span class="transition-all text-code group-hover:text-sub"> &lt; </span>
+   PROGRAMMING DESKTOP LENGUAGES
+<span class="transition-all text-code group-hover:text-sub"> /&gt;</span>
+</h2>
+
+</div>  <!----1th Option END BLOCK--------------------------> 
+
+<!---- 2TH Option -------------------------->   
+<div class="p-2 flex-fill" style="display: inline" >
+
+    <div class="d-flex flex-row ">
+    
+    <div><p class="skillsStyleText"  >BASIC</p></div>
+    &nbsp; &nbsp;
+    <div><img src='imgs/basic.png' alt="" class="img-fluid rounded" 
+    style="height: 4em; width: 4em; margin-top: -1.3em;" /> </div>
+    </div>
+    </div> <!---- 2TH Option END BLOCK-------------------------->
+
+<!---- 3TH Option -------------------------->   
+<div class="p-2 flex-fill" style="display: inline" >
+
+    <div class="d-flex flex-row ">
+    
+    <div><p class="skillsStyleText"  >PASCAL - TURBO PASCAL</p></div>
+    &nbsp; &nbsp;
+    <div><img src='imgs/pascal.png' alt="" class="img-fluid rounded" 
+    style="height: 4em; width: 4em; margin-top: -1.3em;" /> </div>
+    </div>
+    </div> <!---- 3TH Option END BLOCK-------------------------->
+
+<!---- 4TH Option -------------------------->   
+<div class="p-2 flex-fill" style="display: inline" >
+
+    <div class="d-flex flex-row ">
+    
+    <div><p class="skillsStyleText"  >VISUAL BASIC</p></div>
+    &nbsp; &nbsp;
+    <div><img src='imgs/visualBasic.png' alt="" class="img-fluid rounded" 
+    style="height: 4em; width: 4em; margin-top: -1.3em;" /> </div>
+    </div>
+    </div> <!---- 4TH Option END BLOCK-------------------------->
+
+
+</div> <!--- end of 12th line-->
+<!---------------------------------------------------------------------------->
+
+
+<!--- 13th LINE Block Begining ------------------------------------------------------>
+
+
+<div class="d-flex text-white mt-5 flex-wrap">    
+
+    <!----First Option -------------------------->
+<div class="p-2  flex-fill">
+
+   <h2 class="text-lg text-gray-400 flex items-center gap-x-2 group hover:text-white transition-all font-code cursor-pointer z-50" style="
+   font-size: 1.8ex;">
+   <div class="h-[5px] w-1 rounded-full bg-sec "></div>
+   <span class="transition-all text-code group-hover:text-sub"> &lt; </span>
+   GRAPHER
+<span class="transition-all text-code group-hover:text-sub"> /&gt;</span>
+</h2>
+
+</div>  <!----1th Option END BLOCK--------------------------> 
+
+<!---- 2TH Option -------------------------->   
+<div class="p-2 flex-fill" style="display: inline" >
+
+    <div class="d-flex flex-row ">
+    
+    <div><p class="skillsStyleText"  >PHOTOSHOP</p></div>
+    &nbsp; &nbsp;
+    <div><img src='imgs/photoshop01.jpg' alt="" class="img-fluid rounded" 
+    style="height: 4em; width: 4em; margin-top: -1.3em;" /> </div>
+    </div>
+    </div> <!---- 2TH Option END BLOCK-------------------------->
+
+<!---- 3TH Option -------------------------->   
+<div class="p-2 flex-fill" style="display: inline" >
+
+    <div class="d-flex flex-row ">
+    
+    <div><p class="skillsStyleText"  ></p>&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;</div>
+    &nbsp; &nbsp;
+    <div><img src='imgs/visualBasic.png' alt="" class="img-fluid rounded" 
+    style="height: 4em; width: 4em; margin-top: -1.3em;" hidden/> </div>
+    </div>
+    </div> <!---- 3TH Option END BLOCK-------------------------->
+
+</div> <!--------13th end block --------------------------------------------------->
+
+
+
+
+<!---------------------------------------------------------------------------->
+
+<!--- 14th LINE Block Begining ------------------------------------------------------>
+
+
+<div class="d-flex text-white mt-5 flex-wrap">    
+
+    <!----First Option -------------------------->
+<div class="p-2  flex-fill">
+
+   <h2 class="text-lg text-gray-400 flex items-center gap-x-2 group hover:text-white transition-all font-code cursor-pointer z-50" style="
+   font-size: 1.8ex;">
+   <div class="h-[5px] w-1 rounded-full bg-sec "></div>
+   <span class="transition-all text-code group-hover:text-sub"> &lt; </span>
+   AGILE METHODOLOGIES
+<span class="transition-all text-code group-hover:text-sub"> /&gt;</span>
+</h2>
+
+</div>  <!----1th Option END BLOCK--------------------------> 
+
+<!---- 2TH Option -------------------------->   
+<div class="p-2 flex-fill" style="display: inline" >
+
+    <div class="d-flex flex-row ">
+    
+    <div><p class="skillsStyleText"  >SCRUM</p></div>
+    &nbsp; &nbsp;
+    <div><img src='imgs/scrum001.avif' alt="" class="img-fluid rounded" 
+    style="height: 4em; width: 4em; margin-top: -1.3em;" /> </div>
+    </div>
+    </div> <!---- 2TH Option END BLOCK-------------------------->
+
+<!---- 3TH Option -------------------------->   
+<div class="p-2 flex-fill" style="display: inline" >
+
+    <div class="d-flex flex-row ">
+    
+    <div><p class="skillsStyleText"  >KANBAN</p></div>
+    &nbsp; &nbsp;
+    <div><img src='imgs/KAMBAN01.avif' alt="" class="img-fluid rounded" 
+    style="height: 4em; width: 4em; margin-top: -1.3em;" /> </div>
+    </div>
+    </div> <!---- 3TH Option END BLOCK-------------------------->
+
+<!---- 4TH Option -------------------------->   
+<div class="p-2 flex-fill" style="display: inline" >
+
+    <div class="d-flex flex-row ">
+    
+    <div><p class="skillsStyleText"  ></p></div>
+    &nbsp; &nbsp;
+    <div><img src='imgs/visualBasic.png' alt="" class="img-fluid rounded" 
+    style="height: 4em; width: 4em; margin-top: -1.3em;" hidden/> </div>
+    </div>
+    </div> <!---- 4TH Option END BLOCK-------------------------->
+
+
+</div> <!--- end of 14th line-->
+<!---------------------------------------------------------------------------->
+
+<!--- 15th LINE Block Begining ------------------------------------------------------>
+
+
+<div class="d-flex text-white mt-5 flex-wrap">    
+
+    <!----First Option -------------------------->
+<div class="p-2  flex-fill">
+
+   <h2 class="text-lg text-gray-400 flex items-center gap-x-2 group hover:text-white transition-all font-code cursor-pointer z-50" style="
+   font-size: 1.8ex;">
+   <div class="h-[5px] w-1 rounded-full bg-sec "></div>
+   <span class="transition-all text-code group-hover:text-sub"> &lt; </span>
+   EFFICIENT, REPLICABLE, MAINTAINABLE AND SCALABLE SOFTWARE DV 
+<span class="transition-all text-code group-hover:text-sub"> /&gt;</span>
+</h2>
+
+</div>  <!----1th Option END BLOCK--------------------------> 
+
+<!---- 2TH Option -------------------------->   
+<div class="p-2 flex-fill" style="display: inline" >
+
+    <div class="d-flex flex-row ">
+    
+    <div><p class="skillsStyleText"  >SOLID</p></div>
+    &nbsp; &nbsp;
+    <div><img src='imgs/SOLID001.png' alt="" class="img-fluid rounded" 
+    style="height: 6em; width: 8em; margin-top: -1.3em;" /> </div>
+    </div>
+    </div> <!---- 2TH Option END BLOCK-------------------------->
+
+</div><!----15th option end block ------------------------------>
+
+<!---------------------------------------------------------------------------->
+
+<!--- 16th LINE Block Begining ------------------------------------------------------>
+
+
+<div class="d-flex text-white mt-5 flex-wrap">    
+
+    <!----First Option -------------------------->
+<div class="p-2  flex-fill">
+
+   <h2 class="text-lg text-gray-400 flex items-center gap-x-2 group hover:text-white transition-all font-code cursor-pointer z-50" style="
+   font-size: 1.8ex;">
+   <div class="h-[5px] w-1 rounded-full bg-sec "></div>
+   <span class="transition-all text-code group-hover:text-sub"> &lt; </span>
+   AGILE SOFTWARE DEVELOPMENT 
+<span class="transition-all text-code group-hover:text-sub"> /&gt;</span>
+</h2>
+
+</div>  <!----1th Option END BLOCK--------------------------> 
+
+<!---- 2TH Option -------------------------->   
+<div class="p-2 flex-fill" style="display: inline" >
+
+    <div class="d-flex flex-row ">
+    
+    <div><p class="skillsStyleText"  >SOLID-ANGULAR</p></div>
+    &nbsp; &nbsp;
+    <div><img src='imgs/solid-angular.png' alt="" class="img-fluid rounded" 
+    style="height: 4em; width: 4em; margin-top: -1.3em;" /> </div>
+    </div>
+    </div> <!---- 2TH Option END BLOCK-------------------------->
+
+<!---- 3TH Option -------------------------->   
+<div class="p-2 flex-fill" style="display: inline" >
+
+    <div class="d-flex flex-row ">
+    
+    <div><p class="skillsStyleText"  >SOLID-REACT</p></div>
+    &nbsp; &nbsp;
+    <div><img src='imgs/solid-react.png' alt="" class="img-fluid rounded" 
+    style="height: 4em; width: 4em; margin-top: -1.3em;" /> </div>
+    </div>
+    </div> <!---- 3TH Option END BLOCK-------------------------->
+
+
+
+<!---- 4TH Option -------------------------->   
+<div class="p-2 flex-fill" style="display: inline" >
+
+    <div class="d-flex flex-row ">
+    
+    <div><p class="skillsStyleText" >SOLID-NODE</p></div>
+    &nbsp; &nbsp;
+    <div><img src='imgs/solid-nodejs.jpeg' alt="" class="img-fluid rounded" 
+        style="height: 4em; width: 4em; margin-top: -1.3em;" /> </div>
+    </div>
+    </div> <!---- 4TH Option END BLOCK-------------------------->
+
+</div><!----16th option end block ------------------------------>
+
+
+
+<!---------------------------------------------------------------------------->
+
+<!--- 17th LINE Block Begining ------------------------------------------------------>
+
+
+<div class="d-flex text-white mt-5 flex-wrap">    
+
+    <!----First Option -------------------------->
+<div class="p-2  flex-fill">
+
+   <h2 class="text-lg text-gray-400 flex items-center gap-x-2 group hover:text-white transition-all font-code cursor-pointer z-50" style="
+   font-size: 1.8ex;">
+   <div class="h-[5px] w-1 rounded-full bg-sec "></div>
+   <span class="transition-all text-code group-hover:text-sub"> &lt; </span>
+   VERSION CONTROL SYSTEM 
+<span class="transition-all text-code group-hover:text-sub"> /&gt;</span>
+</h2>
+
+</div>  <!----1th Option END BLOCK--------------------------> 
+
+<!---- 2TH Option -------------------------->   
+<div class="p-2 flex-fill" style="display: inline" >
+
+    <div class="d-flex flex-row ">
+    
+    <div><p class="skillsStyleText"  >GIT</p></div>
+    &nbsp; &nbsp;
+    <div><img src='imgs/git.png' alt="" class="img-fluid rounded" 
+    style="height: 4em; width: 4em; margin-top: -1.3em;" /> </div>
+    </div>
+    </div> <!---- 2TH Option END BLOCK-------------------------->
+
+<!---- 3TH Option -------------------------->   
+<div class="p-2 flex-fill" style="display: inline" >
+
+    <div class="d-flex flex-row ">
+    
+    <div><p class="skillsStyleText"  >GITHUB</p></div>
+    &nbsp; &nbsp;
+    <div><img src='imgs/github001.png' alt="" class="img-fluid rounded" 
+    style="height: 4em; width: 4em; margin-top: -1.3em;" /> </div>
+    </div>
+    </div> <!---- 3TH Option END BLOCK-------------------------->
+
+</div><!----17th option end block ------------------------------>
+
+
+
+<!---------------------------------------------------------------------------->
+
+<!---------------------------------------------------------------------------->
+
+<!--- 18th LINE Block Begining ------------------------------------------------------>
+
+
+<div class="d-flex text-white mt-5 flex-wrap">    
+
+    <!----First Option -------------------------->
+<div class="p-2  flex-fill">
+
+   <h2 class="text-lg text-gray-400 flex items-center gap-x-2 group hover:text-white transition-all font-code cursor-pointer z-50" style="
+   font-size: 1.8ex;">
+   <div class="h-[5px] w-1 rounded-full bg-sec "></div>
+   <span class="transition-all text-code group-hover:text-sub"> &lt; </span>
+   CONTINUOUS INTEGRATION AND DELIVERY (CI/CD)
+<span class="transition-all text-code group-hover:text-sub"> /&gt;</span>
+</h2>
+
+</div>  <!----1th Option END BLOCK--------------------------> 
+
+<!---- 2TH Option -------------------------->   
+<div class="p-2 flex-fill" style="display: inline" >
+
+    <div class="d-flex flex-row ">
+    
+    <div><p class="skillsStyleText"  ></p></div>
+    &nbsp; &nbsp;
+    <div><img src='imgs/devops github 002.jpeg' alt="" class="img-fluid rounded" 
+    style="height: 6em; width: 8em; margin-top: -1.3em;" /> </div>
+    </div>
+    </div> <!---- 2TH Option END BLOCK-------------------------->
+
+</div><!----18th option end block ------------------------------>
+<!----------------------------------------------------------------------------->
+
+<!---------------------------------------------------------------------------->
+
+<!--- 19th LINE Block Begining ------------------------------------------------------>
+
+
+<div class="d-flex text-white mt-5 flex-wrap">    
+
+    <!----First Option -------------------------->
+<div class="p-2  flex-fill">
+
+   <h2 class="text-lg text-gray-400 flex items-center gap-x-2 group hover:text-white transition-all font-code cursor-pointer z-50" style="
+   font-size: 1.8ex;">
+   <div class="h-[5px] w-1 rounded-full bg-sec "></div>
+   <span class="transition-all text-code group-hover:text-sub"> &lt; </span>
+   SEO: Search Engine Optimization
+<span class="transition-all text-code group-hover:text-sub"> /&gt;</span>
+</h2>
+
+</div>  <!----1th Option END BLOCK--------------------------> 
+
+<!---- 2TH Option -------------------------->   
+<div class="p-2 flex-fill" style="display: inline" >
+
+    <div class="d-flex flex-row ">
+    
+    <div><p class="skillsStyleText"  ></p></div>
+    &nbsp; &nbsp;
+    <div><img src='imgs/seo-001.png' alt="" class="img-fluid rounded" 
+    style="height: 6em; width: 8em; margin-top: -1.3em;" /> </div>
+    </div>
+    </div> <!---- 2TH Option END BLOCK-------------------------->
+
+</div><!----19th option end block ------------------------------>
+<!----------------------------------------------------------------------------->
+
+<!--- 20th LINE Block Begining ------------------------------------------------------>
+
+
+<div class="d-flex text-white mt-5 flex-wrap">    
+
+    <!----First Option -------------------------->
+<div class="p-2  flex-fill">
+
+   <h2 class="text-lg text-gray-400 flex items-center gap-x-2 group hover:text-white transition-all font-code cursor-pointer z-50" style="
+   font-size: 1.8ex;">
+   <div class="h-[5px] w-1 rounded-full bg-sec "></div>
+   <span class="transition-all text-code group-hover:text-sub"> &lt; </span>
+   SEO
+<span class="transition-all text-code group-hover:text-sub"> /&gt;</span>
+</h2>
+
+</div>  <!----1th Option END BLOCK--------------------------> 
+
+<!---- 2TH Option -------------------------->   
+<div class="p-2 flex-fill" style="display: inline" >
+
+    <div class="d-flex flex-row ">
+    
+    <div><p class="skillsStyleText"  >NODEJS SEO</p></div>
+    &nbsp; &nbsp;
+    <div><img src='imgs/seo-nodejs-01.jpg' alt="" class="img-fluid rounded" 
+    style="height: 6em; width: 8em; margin-top: -1.3em;" /> </div>
+    </div>
+    </div> <!---- 2TH Option END BLOCK-------------------------->
+
+<!---- 3TH Option -------------------------->   
+<div class="p-2 flex-fill" style="display: inline" >
+
+    <div class="d-flex flex-row ">
+    
+    <div><p class="skillsStyleText"  >ANGULAR SEO</p></div>
+    &nbsp; &nbsp;
+    <div><img src='imgs/seo-angular-01.png' alt="" class="img-fluid rounded" 
+    style="height: 6em; width: 8em; margin-top: -1.3em;" /> </div>
+    </div>
+    </div> <!---- 3TH Option END BLOCK-------------------------->
+
+<!---- 4TH Option -------------------------->   
+<div class="p-2 flex-fill" style="display: inline" >
+
+    <div class="d-flex flex-row ">
+    
+    <div><p class="skillsStyleText"  >REACT SEO</p></div>
+    &nbsp; &nbsp;
+    <div><img src='imgs/seo-react-01.png' alt="" class="img-fluid rounded" 
+    style="height: 6em; width: 8em; margin-top: -1.3em;" /> </div>
+    </div>
+    </div> <!---- 4TH Option END BLOCK-------------------------->
+
+
+
+
+</div><!----20th option end block ------------------------------>
+<!----------------------------------------------------------------------------->
+<!----------------------------------------------------------------------------->
+
+<!--- 21th LINE Block Begining ------------------------------------------------------>
+
+
+<div class="d-flex text-white mt-5 flex-wrap">    
+
+    <!----First Option -------------------------->
+<div class="p-2  flex-fill">
+
+   <h2 class="text-lg text-gray-400 flex items-center gap-x-2 group hover:text-white transition-all font-code cursor-pointer z-50" style="
+   font-size: 1.8ex;">
+   <div class="h-[5px] w-1 rounded-full bg-sec "></div>
+   <span class="transition-all text-code group-hover:text-sub"> &lt; </span>
+   TESTING
+<span class="transition-all text-code group-hover:text-sub"> /&gt;</span>
+</h2>
+
+</div>  <!----1th Option END BLOCK--------------------------> 
+
+<!---- 2TH Option -------------------------->   
+<div class="p-2 flex-fill" style="display: inline" >
+
+    <div class="d-flex flex-row ">
+    
+    <div><p class="skillsStyleText"  >JEST</p></div>
+    &nbsp; &nbsp;
+    <div><img src='imgs/JEST001.png' alt="" class="img-fluid rounded" 
+    style="height: 6em; width: 8em; margin-top: -1.3em;" /> </div>
+    </div>
+    </div> <!---- 2TH Option END BLOCK-------------------------->
+
+<!---- 3TH Option -------------------------->   
+<div class="p-2 flex-fill" style="display: inline" >
+
+    <div class="d-flex flex-row ">
+    
+    <div><p class="skillsStyleText">REACT TESTING LIBRARY</p></div>
+    &nbsp; &nbsp;
+    <div><img src='imgs/react testing library 01.jpeg' alt="" class="img-fluid rounded" 
+    style="height: 6em; width: 8em; margin-top: -1.3em;" /> </div>
+    </div>
+    </div> <!---- 3TH Option END BLOCK-------------------------->
+
+</div><!----21th option end block ------------------------------>
+<!----------------------------------------------------------------------------->
+
+<!----------------------------------------------------------------------------->
+
+<!--- 22th LINE Block Begining ------------------------------------------------------>
+
+
+<div class="d-flex text-white mt-5 flex-wrap">    
+
+    <!----First Option -------------------------->
+<div class="p-2  flex-fill">
+
+   <h2 class="text-lg text-gray-400 flex items-center gap-x-2 group hover:text-white transition-all font-code cursor-pointer z-50" style="
+   font-size: 1.8ex;">
+   <div class="h-[5px] w-1 rounded-full bg-sec "></div>
+   <span class="transition-all text-code group-hover:text-sub"> &lt; </span>
+   UX – USER EXPRERIENCE
+<span class="transition-all text-code group-hover:text-sub"> /&gt;</span>
+</h2>
+
+</div>  <!----1th Option END BLOCK--------------------------> 
+
+<!---- 2TH Option -------------------------->   
+<div class="p-2 flex-fill" style="display: inline" >
+
+    <div class="d-flex flex-row ">
+    
+    <div><p class="skillsStyleText"  ></p></div>
+    &nbsp; &nbsp;
+    <div><img src='imgs/UX - USER EXPERIENCE.jpeg' alt="" class="img-fluid rounded" 
+    style="height: 6em; width: 8em; margin-top: -1.3em;" /> </div>
+    </div>
+    </div> <!---- 2TH Option END BLOCK-------------------------->
+
+<!---- 3TH Option -------------------------->   
+<div class="p-2 flex-fill" style="display: inline" >
+
+    <div class="d-flex flex-row ">
+    
+    <div><p class="skillsStyleText"  ></p>&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;</div>
+    &nbsp; &nbsp;
+    <div><img src='imgs/UX - USER EXPERIENCE.jpeg' alt="" class="img-fluid rounded" 
+    style="height: 6em; width: 8em; margin-top: -1.3em;" hidden/> </div>
+    </div>
+    </div> <!---- 3TH Option END BLOCK-------------------------->
+
+
+</div> <!----- END OF 22TH BLOCK --------------------------------------------->
+<!----------------------------------------------------------------------------->
+
+<!----------------------------------------------------------------------------->
+
+<!--- 23th LINE Block Begining ------------------------------------------------------>
+
+
+<div class="d-flex text-white mt-5 flex-wrap">    
+
+    <!----First Option -------------------------->
+<div class="p-2  flex-fill">
+
+   <h2 class="text-lg text-gray-400 flex items-center gap-x-2 group hover:text-white transition-all font-code cursor-pointer z-50" style="
+   font-size: 1.8ex;">
+   <div class="h-[5px] w-1 rounded-full bg-sec "></div>
+   <span class="transition-all text-code group-hover:text-sub"> &lt; </span>
+   OPERATIVE SYSTEMS
+<span class="transition-all text-code group-hover:text-sub"> /&gt;</span>
+</h2>
+
+</div>  <!----1th Option END BLOCK--------------------------> 
+
+<!---- 2TH Option -------------------------->   
+<div class="p-2 flex-fill" style="display: inline" >
+
+    <div class="d-flex flex-row ">
+    
+    <div><p class="skillsStyleText">WINDOWS</p></div>
+    &nbsp; &nbsp;
+    <div><img src='imgs/WINDOWS01.jpeg' alt="" class="img-fluid rounded" 
+    style="height: 6em; width: 8em; margin-top: -1.3em;" /> </div>
+    </div> 
+</div> <!-----2TH OPTION END BLOCK ------------------------>
+    
+<!---- 3TH Option -------------------------->   
+<div class="p-2 flex-fill" style="display: inline" >
+
+    <div class="d-flex flex-row ">
+        
+    <div><p class="skillsStyleText">MS-DOS</p></div>
+    &nbsp; &nbsp;
+    <div><img src='imgs/MS-DOS01.png' alt="" class="img-fluid rounded" 
+    style="height: 6em; width: 8em; margin-top: -1.3em;" /> </div>
+    </div>
+    </div> 
+
+</div> <!---- 3TH Option END BLOCK-------------------------->
+
+<!----------------------------------------------------------------------------->
+
+</div> <!----End of Section 1 block ----------------------------------------->
+</div>
+
+<!--------------------SKILLS BLOCK END ----------------------------------------->
+
+
+<!-------------- education block begining -------------------------------------->
+
+    <div id="section2" class="container-fluid  text-white edubg rounded-5">
+      
+        <h2 style="font-weight: bold; font-size: 1.5em;" class="text-center mt-3">EDUCATION</h2>
+        <br>
+        <br>
+
+            
+        <div class="timeline d-flex flex-row flex-wrap">
+            <div class="timeline-item">
+                <div class="timeline-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <p class="timeline-duration">1987 - 1991</p>
+                <h5 style="color: burlywood;">Industrial Mechanical Technician Superior<span> -<br /> UNIVERSITY INSTITUTE OF TECHNOLOGY OF PUERTO CABELLO</span></h5>
+                <p>
+                    <h6>Percentage - 75%</h6>
+                    
+                </p>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <p class="timeline-duration">1995 - 2002</p>
+                <h5 style="color: burlywood;">ENGINEER of SYSTEMS<span> -<br /> NATIONAL OPEN UNIVERSITY CARABOBO STATE</span></h5>
+                <p>
+                    <h6>GPA - 18 over 20</h6>
+                </p>
+            </div>
+
+
+
+
+
+    </div>
+
+
+    </div>
+    
+   
+<!----------------------------------------------------------------------------->
+
+    <div id="section3" class="container-fluid text-white rounded-5 pt-3 mt-1 edubg" style="padding:100px 20px;">
+        
+ 
+
+    <!----------------------------new section --------------------->
+    <h2 style="font-weight: bold; font-size: 1.5em;" class="text-center mt-3">WORK EXPERIENCE</h2>
+    <br>
+    <br>
+
+        
+    <div class="timeline d-flex flex-row flex-wrap">
+        <div class="timeline-item">
+            <div class="timeline-icon">
+                <i class="fa fa-cogs"></i>
+
+            </div>
+            <p class="timeline-duration">Febrery 2002. Up TO NOW.</p>
+            <h5 style="color: burlywood;">FREELANCE DEVELOPER.<span> -<br /> OFIPRO.SRL</span></h5>
+            <p>
+                <h6>Naguanagua, Edo.Carabobo, Carabobo State, Venezuela</h6>
+                
+            </p>
+        </div>
+        
+        <div class="timeline-item">
+            <div class="timeline-icon">
+                <i class="fa fa-cogs"></i>
+            </div>
+            <p class="timeline-duration">January 1991. Until: December 2002</p>
+            <h5 style="color: burlywood;">NETWORK ADMINISTRATOR<span> -<br /> OILS OF VENEZUELA(PDVSA)</span></h5>
+            <p>
+                <h6>Centro Distribution, Yagua, Carabobo State, Venezuela</h6>
+            </p>
+        </div>
+
+
+
+
+
+</div>
+
+
+    <!---------------------------- End New Section ---------------->
+    </div>
+
+<!--------------- end of section 3 block -------------------------------------->
+<!--------------BEGINING SECTION 4--------------------------------------------->
+
+    <div id="section4" class="container-fluid  text-white rounded-5 pt-3 mt-1 edubg" style="padding:100px 20px;">
+        
+    <!----------------------------new section --------------------->
+    <h2 style="font-weight: bold; font-size: 1.5em;" class="text-center mt-3">EXTRA SKILLS</h2>
+    <br>
+    <br>
+
+        
+    <div class="timeline d-flex flex-row flex-wrap">
+        
+       <!------Option 1 ---------------------------------------------------->
+        <div class="timeline-item">
+            <div class="timeline-icon"><i class="fa fa-refresh"></i></div>
+            <h5 style="color: burlywood;">Communication & Interpersonal  skills:</h5>
+            <p><h6>I Have the ability to communicate the desired message           
+                    effectively while keeping the listener engaged. </h6></p>
+        </div>
+     <!------Option 1 End Block ------------------------------------------->
+     <!------Option 2 ----------------------------------------------------->  
+     <div class="timeline-item">
+        <div class="timeline-icon"><i class="fa fa-refresh"></i></div>
+        <h5 style="color: burlywood;">Public speaking skills:</h5>
+        <p><h6>Have extensive experience of public speaking in the form of event hosting and delivering presentation in front of large audience.</h6></p>
+    </div>
+     <!------Option 2 End Block ------------------------------------------->
+     <!------Option 3 ----------------------------------------------------->  
+     <div class="timeline-item">
+        <div class="timeline-icon"><i class="fa fa-refresh"></i></div>
+        <h5 style="color: burlywood;">Leadership & Management skills:</h5>
+        <p><h6>Skilled in organising other people to reach a shared goal and    
+            Keep the team motivated to reach the desired goal. Can organise and  communicate  clearly  to support a team or project. 
+         </h6></p>
+    </div>
+     <!------Option 3 End Block ------------------------------------------->
+     <!------Option 4 ----------------------------------------------------->  
+     <div class="timeline-item">
+        <div class="timeline-icon"><i class="fa fa-refresh"></i></div>
+        <h5 style="color: burlywood;">Effective Problem Solver:</h5>
+        <p><h6>I have the capability to solve problems and determining the cause of  the  Problem . Identifying, prioritizing , and selecting alternatives for a solution; and implementing a solution.  </h6></p>
+    </div>
+     <!------Option 4 End Block ------------------------------------------->
+    <!------Option 5 ----------------------------------------------------->  
+    <div class="timeline-item">
+        <div class="timeline-icon"><i class="fa fa-refresh"></i></div>
+        <h5 style="color: burlywood;">Computer facilitator in the areas of Hardware and Software.</h5>
+        
+    </div>
+     <!------Option 5 End Block ------------------------------------------->
+     <!------Option 6 ----------------------------------------------------->  
+    <div class="timeline-item">
+        <div class="timeline-icon"><i class="fa fa-refresh"></i></div>
+        <h5 style="color: burlywood;">Analytical with an overall vision, communicative, honest and respectful.</h5>
+        
+    </div>
+     <!------Option 6 End Block ------------------------------------------->
+
+
+</div>
+
+
+    <!---------------------------- End New Section ---------------->
+
+    </div>
+
+<!--------------- end of section 4 block -------------------------------------->
+
+</div>
+</div>
+
+<!------------------------------ABTME SECTION END BLOCK ------------------->
+<!------------------------ CAROUSEL SECTION -------------------------------->
+
+
+<div class="slider rounded-2">
+    <div class="slide-track">
+      <div class="slide">
+        <img src='./imgs/html.png' height="55" width="145" alt="" style="margin-top: -0.5em ;"/>
+      </div>
+      <div class="slide">
+        <img src='./imgs/css.png' height="70" width="200" alt="" class="mt-2" />
+      </div>
+      <div class="slide">
+        <img src='./imgs/bootstrap.png' height="35" width="120" alt="" class="mt-2" />
+      </div>
+      <div class="slide">
+        <img src='./imgs/angular.png' height="43" width="130" alt="" />
+      </div>
+      <div class="slide">
+        <img src='./imgs/react.png' height="38" width="120" alt="" class="mt-2"/>
+      </div>
+      <div class="slide">
+        <img src='./imgs/node.png' height="70" width="200" alt="" class="mt-2" />
+      </div>
+      <div class="slide">
+        <img src='./imgs/mongo.png' height="43" width="130" alt="" class="mt-2" />
+      </div>
+      <div class="slide">
+        <img src='./imgs/KANBAN.jpg' height="60" width="180" alt="" class="mt-2" />
+      </div>
+      <div class="slide">
+        <img src='./imgs/mongoose.png' height="60" width="180" alt="" style="margin-top: -1.5em ;" />
+      </div>
+      <div class="slide">
+        <img src='./imgs/JEST001.png' height="60" width="180" alt="" class="mt-3" />
+      </div>
+      <div class="slide">
+        <img src='./imgs/TYPESCRIPT01.png' height="70" width="200" alt="" class="mt-4" />
+      </div>
+      <div class="slide">
+        <img src='./imgs/Tailwind CSS.png' height="60" width="180" alt="" class="mt-1"/>
+      </div>
+      <div class="slide">
+        <img src='./imgs/SOLID001.png' height="60" width="180" alt="" class="mt-2"/>
+      </div>
+      <div class="slide">
+        <img src='./imgs/react testing library 01.jpeg'height="43" width="130" alt="" class="mt-2"/>
+      </div>
+    </div>
+  </div>
+    
+
+<br>
+<br>
+<br>
+<br>
+
+<!-------------------------CAROUSEL SECTION END BLOCK ---------------------->
+<!-------------------------PROJECTS SECTION BEGINING ----------------------->
+<div class="container-fluid project_container" style="overflow:hidden;">
+ <!-----PROJECTS SECTION BEGINING HEADING-------->   
+    <!--project heading -->
+    <div class="row project_hding text-center">
+        <h4 class="mt-5" id="project" style="color: burlywood;font-size: 1.2em;"> CASES STUDIED </h4> <br />
+        <h2 style="color: white; font-size: 2em;"><b> Projects Worked </b></h2>
+    </div>
+    <br>
+    <hr>
+<!-----MENU PROJECTS SECTION BEGINING HEADING-------->
+
+<div data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
+
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark rounded-4">
+      <div class="container-fluid d-flex justify-content-center">
+        <ul class="navbar-nav">
+          <li class="nav-item tabs active flex-item mx-auto tablinks ml-5">
+            <a class="nav-link" href="#reactjsx" style="cursor: pointer;">REACT JSX - (MERN)</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#reacttypescript" style="cursor: pointer;">REACT TYPESCRIPT - (MERN)</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#reactnative" style="cursor: pointer;">REACT NATIVE</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#angular" style="cursor: pointer;">ANGULAR - (MEAN)</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#nodejs" style="cursor: pointer;">NODEJS</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+</div>
+<!-----MENU PROJECTS SECTION ENDING HEADING---------->
+
+<!-----PROJECTS SECTION ENDING HEADING BLOCK --->  
+<br>
+<br>
+<div class="row project_hding text-center" id="reactjsx">
+    <h2 style="color: white; font-size: 2em;"><b> REACT JSX </b></h2>
+</div>
+<br>
+<br>
+
+ <!-----PROJECTS SECTION BEGINING CONTAINER -------->
+     
+ <!-----PROJECTS SECTION BEGINING PROJECT 1 CARD -------->
+
+<div class="d-flex flex-row flex-wrap"><!--- begining block react-jsx-->
+    
+    <div class="col-md-3 py-3 mt-3 project_card mx-auto" id="project1">
+        <a class="nav-link text-center" style="color: beige; cursor: pointer;" href="https://github.com/sergio7174/MERNECOMMERCE01">Project Github Location</a>
+        <div class="project_img text-center d-flex justify-center">
+            <img src= './imgs/p3.png' alt="" class="project_img_size" />   
+        </div>
+        <div class="project_intro mt-4">
+            <h3>E-COMMERCE WEBSITE</h3> 
+            <h4>MERN Stack E-commerce Dynamic Website</h4>
+        </div>
+        <h5 class='text-center mx-2 my-3 project_desc'>
+
+            <h5 class='text-center' style="color: aliceblue;">Key Features</h5>
+                <h6 class='text-start' style="line-height:1.5; color: bisque;">
+                    <ul class="m-3">
+                        <li > Incorporated all the key features of an e-commerce   
+                             website in a dynamic manner.</li>
+                        <li> Created multiple custom API using Nodejs and integrated 
+                             it with a React setup.</li>
+                        <li> Followed best code practices while developing dynamic 
+                             and reusable code.</li>
+                    </ul>
+                </h6>       
+    
+            </h5>
+    
+            <h6 class='project_tech_hd text-center'>Technology Used</h6>
+            <br/>
+            <h3 class='mb-2 text-light'>
+                <div class="d-flex flex-row justify-center">          
+                    <div>
+                           <i class="fa-brands fa-html5 mx-2"></i>
+                           <i class="fa-brands fa-css3-alt mx-2"></i>
+                           <i class="fa-brands fa-js-square mx-2"></i>
+                           <i class="fa-brands fa-bootstrap mx-2"></i>
+                           <i class="fa-brands fa-react mx-2"></i>
+                           <i class="fa-brands fa-node mx-2"></i>
+                           <i class="fa-brands fa-npm mx-2"></i>
+                   </div>     
+                </div> 
+                <div class="d-flex flex-row justify-center" style="margin-top: 0.3em;">
+                    <img src='./imgs/redux-toolkit.png' alt="" style="width:1.8em;height:auto; margin-right: 0.2em;" />
+                    <img src='./imgs/express.png' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />
+                    <img src='./imgs/mongo.png' alt="" style="width:1.6em;height:auto; margin-right: 0.2em;" />  
+                </div>             
+            </h3>  
+     </div>
+
+     <div class="col-md-3 py-3 mt-3 project_card mx-auto" id="project2">
+        <a class="nav-link text-center" style="color: beige; cursor: pointer;" href="https://github.com/sergio7174/youtubecloneser">Project Github Location</a>
+        <div class="project_img text-center d-flex justify-center">
+            <img src= './imgs/project004ReactYoutubeclone.jpg' alt="" class="project_img_size" />   
+        </div>
+        <div class="project_intro mt-4">
+            <h3>YOUTUBE CLONE WEBSITE</h3> 
+            <h4>MERN Stack Video Stream Dynamic Website</h4>
+        </div>
+        <h5 class='text-center mx-2 my-3 project_desc'>
+
+            <h5 class='text-center' style="color: aliceblue;">Key Features</h5>
+                <h6 class='text-start' style="line-height:1.5; color: bisque;">
+                    <ul class="m-3">
+                        <li > User registration and login.</li>
+                        <li> Upload, Add, edit and delete Videos.</li>
+                        <li> Responsive Design.</li>
+                    </ul>
+                </h6>       
+    
+            </h5>
+    
+            <h6 class='project_tech_hd text-center'>Technology Used</h6>
+            <br/>
+            <h3 class='mb-2 text-light'>
+                <div class="d-flex flex-row justify-center">          
+                    <div>
+                           <i class="fa-brands fa-html5 mx-2"></i>
+                           <i class="fa-brands fa-css3-alt mx-2"></i>
+                           <i class="fa-brands fa-js-square mx-2"></i>
+                           <i class="fa-brands fa-bootstrap mx-2"></i>
+                           <i class="fa-brands fa-react mx-2"></i>
+                           <i class="fa-brands fa-node mx-2"></i>
+                           <i class="fa-brands fa-npm mx-2"></i>
+                          
+                   </div>     
+                </div> 
+                <div class="d-flex flex-row justify-center" style="margin-top: 0.3em;">
+                    <img src='./imgs/redux-toolkit.png' alt="" style="width:1.8em;height:auto; margin-right: 0.2em;" />
+                    <img src='./imgs/express.png' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />
+                    <img src='./imgs/mongo.png' alt="" style="width:1.6em;height:auto; margin-right: 0.2em;" />  
+                </div>    
+            </h3>       
+                      
+     </div>     
+     
+     
+
+     <div class="col-md-3 py-3 mt-3 project_card mx-auto" id="project3">
+        <a class="nav-link text-center" style="color: beige; cursor: pointer;" href="https://github.com/sergio7174/personalPorfolio">Project Github Location</a>
+        <div class="project_img text-center d-flex justify-center">
+            <img src= './imgs/project002.jpg' alt="" class="project_img_size" />   
+        </div>
+        <div class="project_intro mt-4">
+            <h3>MY PERSONAL PORTFOLIO WEBSITE</h3> 
+            <h4>REACT Dynamic Website</h4>
+        </div>
+        <h5 class='text-center mx-2 my-3 project_desc'>
+
+            <h5 class='text-center' style="color: aliceblue;">Key Features</h5>
+                <h6 class='text-start' style="line-height:1.5; color: bisque;">
+                    <ul class="m-3">
+                        <li > Incorporated all the key features of an dinamic   
+                             website.</li>
+                        <li> Followed best code practices while developing dynamic 
+                             and reusable code.</li>
+                    </ul>
+                </h6>       
+    
+            </h5>
+    
+            <h6 class='project_tech_hd text-center'>Technology Used</h6>
+            <br/>
+            <h3 class='mb-2 text-light'>
+                <div class="d-flex flex-row justify-center">          
+                    <div>
+                           <i class="fa-brands fa-html5 mx-2"></i>
+                           <i class="fa-brands fa-css3-alt mx-2"></i>
+                           <i class="fa-brands fa-js-square mx-2"></i>
+                           <i class="fa-brands fa-bootstrap mx-2"></i>
+                           <i class="fa-brands fa-react mx-2"></i>
+                           <i class="fa-brands fa-node mx-2"></i>
+                           <i class="fa-brands fa-npm mx-2"></i>
+                   </div>
+                  
+                </div>         
+           </div>   
+        </h3>   
+     </div>
+
+     <div class="col-md-3 py-3 mt-3 project_card mx-auto" id="project4">
+        <a class="nav-link text-center" style="color: beige; cursor: pointer;" href="https://github.com/sergio7174/pizzaser">Project Github Location</a>
+        <div class="project_img text-center ">
+            <img src= './imgs/project 003 - pizza FLEET.jpg' alt="" class="project_img_size" />   
+        </div>
+        <div class="project_intro mt-4">
+            <h3>MERN Pizza</h3> 
+            <h4>Fullstack Pizza - Food application Dynamic Website</h4>
+        </div>
+        <h5 class='text-center mx-2 my-3 project_desc'>
+
+            <h5 class='text-center' style="color: aliceblue;">Key Features</h5>
+                <h6 class='text-start' style="line-height:1.5; color: bisque;">
+                    <ul class="m-3">
+                        <li > Incorporated all the key features of an e-commerce   
+                             website in a dynamic manner.</li>
+                        <li> Created multiple custom API using Nodejs and integrated 
+                             it with a React setup.</li>
+                        <li> Followed best code practices while developing dynamic 
+                             and reusable code.</li>
+                    </ul>
+                </h6>       
+    
+            </h5>
+    
+            <h6 class='project_tech_hd text-center'>Technology Used</h6>
+            <br/>
+            <h3 class='mb-2 text-light'>
+                <div class="d-flex  flex-row justify-center">          
+                    <div>
+                           <i class="fa-brands fa-html5 mx-2"></i>
+                           <i class="fa-brands fa-css3-alt mx-2"></i>
+                           <i class="fa-brands fa-js-square mx-2"></i>
+                           <i class="fa-brands fa-bootstrap mx-2"></i>
+                           <i class="fa-brands fa-react mx-2"></i>
+                           <i class="fa-brands fa-node mx-2"></i>
+                           <i class="fa-brands fa-npm mx-2"></i>
+                   </div>
+                   <div class="d-flex flex-row">
+                       <img src='./imgs/redux-toolkit.png' alt="" style="width:1.8em;height:auto" />
+                       <img src='./imgs/express.png' alt="" style="width:1.8em; height:auto" />
+                       <img src='./imgs/mongo.png' alt="" style="width:1.6em;height:auto" />
+                       </h3>
+                   </div>       
+     </div>
+    </div>
+
+
+
+
+</div> <!--- end container projects react-jsx-->
+
+<!------------ REACT TYPESCRIPT SECTION ------------------------>
+
+<br>
+<br>
+<div class="row project_hding text-center" id="reacttypescript">
+    <h2 style="color: white; font-size: 2em;"><b> REACT TYPESCRIPT</b></h2>
+</div>
+<br>
+<br>
+
+ <!-----PROJECTS SECTION BEGINING CONTAINER -------->
+     
+ <!-----PROJECTS SECTION BEGINING PROJECT 1 CARD -------->
+
+<div class="d-flex flex-row flex-wrap"><!--- begining block react-jsx-->
+    
+    <div class="col-md-3 py-3 mt-3 project_card mx-auto" id="project1">
+        <a class="nav-link text-center" style="color: beige; cursor: pointer;" href="https://github.com/sergio7174/mernContact">Project Github Location</a>
+        <div class="project_img text-center d-flex justify-center">
+            <img src= './imgs/contact01.jpg' alt="" class="project_img_size" />   
+        </div>
+        <div class="project_intro mt-4">
+            <h3>MERN CONTACT WEBSITE</h3> 
+            <h4>Fullstack open source Contact application </h4>
+              <h4>(Add/Edit/Erase My Contacts)</h4>
+        </div>
+        <h5 class='text-center mx-2 my-3 project_desc'>
+
+            <h5 class='text-center' style="color: aliceblue;">Key Features</h5>
+                <h6 class='text-start' style="line-height:1.5; color: bisque;">
+                    <ul class="m-3">
+                        <li > Add, edit, delete Contacs  
+                             website in a dynamic manner.</li>
+                        <li> Created multiple custom API using Nodejs and integrated 
+                             it with a React setup.</li>
+                        <li> Followed best code practices while developing dynamic 
+                             and reusable code.</li>
+                    </ul>
+                </h6>       
+    
+            </h5>
+    
+            <h6 class='project_tech_hd text-center'>Technology Used</h6>
+            <br/>
+            <h3 class='mb-2 text-light'>
+                <div class="d-flex flex-row justify-center">          
+                    <div>
+                           <i class="fa-brands fa-html5 mx-2"></i>
+                           <i class="fa-brands fa-css3-alt mx-2"></i>
+                           <i class="fa-brands fa-js-square mx-2"></i>
+                           <i class="fa-brands fa-bootstrap mx-2"></i>
+                           <i class="fa-brands fa-react mx-2"></i>
+                           <i class="fa-brands fa-node mx-2"></i>
+                           <i class="fa-brands fa-npm mx-2"></i>
+                   </div>     
+                </div> 
+                <div class="d-flex flex-row justify-center" style="margin-top: 0.3em;">
+                    <img src='./imgs/express.png' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />
+                    <img src='./imgs/mongo.png' alt="" style="width:1.6em;height:auto; margin-right: 0.2em;" />  
+                </div>             
+            </h3>  
+     </div>
+
+     <div class="col-md-3 py-3 mt-3 project_card mx-auto" id="project2">
+        <a class="nav-link text-center" style="color: beige; cursor: pointer;" href="https://github.com/sergio7174/EcommerElectronic">Project Github Location</a>
+        <div class="project_img text-center d-flex justify-center">
+            <img src= './imgs/ElectronicEcommerceMern.jpg' alt="" class="project_img_size" />   
+        </div>
+        <div class="project_intro mt-4">
+            <h3>EcommerElectronic WEBSITE</h3> 
+            <h4>MERN Stack Ecommerce application </h4>
+        </div>
+        <h5 class='text-center mx-2 my-3 project_desc'>
+
+            <h5 class='text-center' style="color: aliceblue;">Key Features</h5>
+                <h6 class='text-start' style="line-height:1.5; color: bisque;">
+                    <ul class="m-3">
+                        <li > User registration and login.</li>
+                        <li> Upload, Add, edit and delete Products.</li>
+                        <li> Responsive Design.</li>
+                    </ul>
+                </h6>       
+    
+            </h5>
+    
+            <h6 class='project_tech_hd text-center'>Technology Used</h6>
+            <br/>
+            <h3 class='mb-2 text-light'>
+                <div class="d-flex flex-row justify-center">          
+                    <div>
+                           <i class="fa-brands fa-html5 mx-2"></i>
+                           <i class="fa-brands fa-css3-alt mx-2"></i>
+                           <i class="fa-brands fa-js-square mx-2"></i>
+                           <i class="fa-brands fa-bootstrap mx-2"></i>
+                           <i class="fa-brands fa-react mx-2"></i>
+                           <i class="fa-brands fa-node mx-2"></i>
+                           <i class="fa-brands fa-npm mx-2"></i>
+                          
+                   </div>     
+                </div> 
+                <div class="d-flex flex-row justify-center" style="margin-top: 0.3em;">
+                    <img src='./imgs/redux-toolkit.png' alt="" style="width:1.8em;height:auto; margin-right: 0.2em;" />
+                    <img src='./imgs/express.png' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />
+                    <img src='./imgs/mongo.png' alt="" style="width:1.6em;height:auto; margin-right: 0.2em;" />  
+                </div>    
+            </h3>       
+                      
+     </div>     
+     
+     
+
+     <div class="col-md-3 py-3 mt-3 project_card mx-auto" id="project3">
+        <a class="nav-link text-center" style="color: beige; cursor: pointer;" href="https://github.com/sergio7174/leatherShop">Project Github Location</a>
+        <div class="project_img text-center d-flex justify-center">
+            <img src= './imgs/LeatherShop.jpg' alt="" class="project_img_size" />   
+        </div>
+        <div class="project_intro mt-4">
+            <h3>💼 🥾 Leather Shop WEBSITE</h3> 
+            <h4>MERN Dynamic Website</h4>
+        </div>
+        <h5 class='text-center mx-2 my-3 project_desc'>
+
+            <h5 class='text-center' style="color: aliceblue;">Key Features</h5>
+                <h6 class='text-start' style="line-height:1.5; color: bisque;">
+                    <ul class="m-3">
+                        <li> Add, edit, delete Product</li>
+                        <li > Incorporated all the key features of an dinamic   
+                             website.</li>
+                        <li> Followed best code practices while developing dynamic and reusable code.</li>
+                    </ul>
+                </h6>       
+    
+            </h5>
+    
+            <h6 class='project_tech_hd text-center'>Technology Used</h6>
+            <br/>
+            <h3 class='mb-2 text-light'>
+                <div class="d-flex flex-row justify-center">          
+                    <div>
+                           <i class="fa-brands fa-html5 mx-2"></i>
+                           <i class="fa-brands fa-css3-alt mx-2"></i>
+                           <i class="fa-brands fa-js-square mx-2"></i>
+                           <i class="fa-brands fa-bootstrap mx-2"></i>
+                           <i class="fa-brands fa-react mx-2"></i>
+                           <i class="fa-brands fa-node mx-2"></i>
+                           <i class="fa-brands fa-npm mx-2"></i>
+                   </div>
+                  
+                </div>  
+                <div class="d-flex flex-row justify-center" style="margin-top: 0.3em;">
+                    <img src='./imgs/redux-toolkit.png' alt="" style="width:1.8em;height:auto; margin-right: 0.2em;" />
+                    <img src='./imgs/express.png' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />
+                    <img src='./imgs/mongo.png' alt="" style="width:1.6em;height:auto; margin-right: 0.2em;" />  
+                </div>        
+           </div>  
+          
+        </h3>   
+     </div>
+<!------------------------------------------------------------------------>
+     <div class="col-md-3 py-3 mt-3 project_card mx-auto" id="project4">
+        <a class="nav-link text-center" style="color: beige; cursor: pointer;" href="https://github.com/sergio7174/typenotecrud">Project Github Location</a>
+        <div class="project_img text-center d-flex justify-center">
+            <img src= './imgs/Mernnotes.jpg' alt="" class="project_img_size" />   
+        </div>
+        <div class="project_intro mt-4">
+            <h3>📰 📹 Type Notes</h3> 
+            <h4>React JSX(MERN) - EDIT/ADD/REMOVE</h4> 
+             <h4>notes Dynamic Website</h4>
+        </div>
+        <h5 class='text-center mx-2 my-3 project_desc'>
+
+            <h5 class='text-center' style="color: aliceblue;">Key Features</h5>
+                <h6 class='text-start' style="line-height:1.5; color: bisque;">
+                    <ul class="m-3">
+                       
+                        <li> Add, edit, delete Notes.</li>
+                        <li> Followed best code practices while developing dynamic and reusable code.</li>
+                    </ul>
+                </h6>       
+    
+            </h5>
+    
+            <h6 class='project_tech_hd text-center'>Technology Used</h6>
+            <br/>
+            <h3 class='mb-2 text-light'>
+                <div class="d-flex  flex-row justify-center">          
+                    <div>
+                           <i class="fa-brands fa-html5 mx-2"></i>
+                           <i class="fa-brands fa-css3-alt mx-2"></i>
+                           <i class="fa-brands fa-js-square mx-2"></i>
+                           <i class="fa-brands fa-bootstrap mx-2"></i>
+                           <i class="fa-brands fa-react mx-2"></i>
+                           <i class="fa-brands fa-node mx-2"></i>
+                           <i class="fa-brands fa-npm mx-2"></i>
+                   </div>
+                   <div class="d-flex flex-row">
+                       <img src='./imgs/redux-toolkit.png' alt="" style="width:1.8em;height:auto" />
+                       <img src='./imgs/express.png' alt="" style="width:1.8em; height:auto" />
+                       <img src='./imgs/mongo.png' alt="" style="width:1.6em;height:auto" />
+                       </h3>
+                   </div>       
+     </div>
+    </div>
+<!---------- end react typescrip section ----------------------------------->
+<!------------   REACT NATIVE SECTION -------------------------------------->
+
+<br>
+<br>
+<div class="row project_hding text-center" id="reactnative">
+    <h2 style="color: white; font-size: 2em;"><b> REACT NATIVE</b></h2>
+</div>
+<br>
+<br>
+
+ <!-----PROJECTS SECTION BEGINING CONTAINER -------->
+     
+ <!-----PROJECTS SECTION BEGINING PROJECT 1 CARD -------->
+
+<div class="d-flex flex-row flex-wrap"><!--- begining block react-jsx-->
+    
+    <div class="col-md-3 py-3 mt-3 project_card mx-auto" id="project1">
+        <a class="nav-link text-center" style="color: beige; cursor: pointer;" href="https://github.com/sergio7174/SerCheffReactNative">Project Github Location</a>
+        <div class="project_img text-center d-flex justify-center">
+            <img src= './imgs/SerChefNative.jpg' alt="" class="project_img_size" />   
+        </div>
+        <div class="project_intro mt-4">
+            <h3>FOOD RECIPE WEBSITE</h3> 
+            <h4>A mobile application where users can search,</h4>
+              <h4>view, and add your own food recipes.</h4>
+        </div>
+        <h5 class='text-center mx-2 my-3 project_desc'>
+
+            <h5 class='text-center' style="color: aliceblue;">Key Features</h5>
+                <h6 class='text-start' style="line-height:1.5; color: bisque;">
+                    <ul class="m-3">
+                        <li > Add, edit, delete recipe.</li>
+                        <li>See from Youtube the video Recipe</li>
+                        <li> Followed best code practices while developing dynamic and reusable code.</li>
+                    </ul>
+                </h6>       
+    
+            </h5>
+    
+            <h6 class='project_tech_hd text-center'>Technology Used</h6>
+            <br/>
+            <h3 class='mb-2 text-light'>
+                <div class="d-flex flex-row justify-center">          
+                    <div class="d-flex flex-row justify-center" style="margin-top: 0.3em;">
+                        <img src='./imgs/react-native-logo.webp' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />
+                        <img src='./imgs/redux-toolkit.png' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />
+                        <img src='./imgs/StyleComponents.png' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />
+                        <img src='./imgs/react-navigation.png' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />
+                        <img src='./imgs/axios.png' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />
+                        <img src='./imgs/expo01.png' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />
+                          
+                   </div>     
+                </div>            
+            </h3>  
+     </div>
+
+     <div class="col-md-3 py-3 mt-3 project_card mx-auto" id="project2">
+        <a class="nav-link text-center" style="color: beige; cursor: pointer;" href="https://github.com/sergio7174/TripMemories">Project Github Location</a>
+        <div class="project_img text-center d-flex justify-center">
+            <img src= './imgs/NativeTripMemorie.jpg' alt="" class="project_img_size" />   
+        </div>
+        <div class="project_intro mt-4">
+            <h3>🗺️🚘🛣️ TripMemories WEBSITE</h3> 
+            <h4>A travel Mobile app, to save trips memories Notes </h4>
+        </div>
+        <h5 class='text-center mx-2 my-3 project_desc'>
+
+            <h5 class='text-center' style="color: aliceblue;">Key Features</h5>
+                <h6 class='text-start' style="line-height:1.5; color: bisque;">
+                    <ul class="m-3">
+                        <li > User registration and login.</li>
+                        <li> Add, edit and delete Notes.</li>
+                        <li> Responsive Design.</li>
+                    </ul>
+                </h6>       
+    
+            </h5>
+    
+            <h6 class='project_tech_hd text-center'>Technology Used</h6>
+            <br/>
+            <h3 class='mb-2 text-light'>
+                <div class="d-flex flex-row justify-center">          
+                    <div class="d-flex flex-row justify-center" style="margin-top: 0.3em;">
+                        <img src='./imgs/react-native-logo.webp' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />
+                        <img src='./imgs/redux-toolkit.png' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />
+                        <img src='./imgs/StyleComponents.png' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />
+                        <img src='./imgs/react-navigation.png' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />
+                        <img src='./imgs/axios.png' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />
+                        <img src='./imgs/expo01.png' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />
+                        <img src='./imgs/firebase01.webp' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />
+                        <img src='./imgs/Tailwind CSS.png' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />
+                        <img src='./imgs/flashmessages.webp' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />
+                          
+                   </div>     
+                </div>      
+            </h3>       
+                      
+     </div>     
+     
+   <!------------------------------------------------------------------------->  
+
+     <div class="col-md-3 py-3 mt-3 project_card mx-auto" id="project3">
+        <a class="nav-link text-center" style="color: beige; cursor: pointer;" href="https://github.com/sergio7174/FirebaseAuthDbNotes">Project Github Location</a>
+        <div class="project_img text-center d-flex justify-center">
+            <img src= './imgs/nativeFirebaseNotes.jpg' alt="" class="project_img_size" />   
+        </div>
+        <div class="project_intro mt-4">
+            <h3>📋 ✍️ 🗄️ FirebaseDBNotes WEBSITE</h3> 
+            <h4>React Native - Firebase Auth and Db </h4>
+             <h4>EDIT/ADD/REMOVE notes Website</h4>
+        </div>
+        <h5 class='text-center mx-2 my-3 project_desc'>
+
+            <h5 class='text-center' style="color: aliceblue;">Key Features</h5>
+                <h6 class='text-start' style="line-height:1.5; color: bisque;">
+                    <ul class="m-3">
+                        <li> Add, edit, delete Notes</li>
+                        <li > Incorporated all the key features of an dinamic   
+                             website.</li>
+                        <li> Followed best code practices while developing dynamic 
+                             and reusable code.</li>
+                    </ul>
+                </h6>       
+    
+            </h5>
+    
+            <h6 class='project_tech_hd text-center'>Technology Used</h6>
+            <br/>
+            <h3 class='mb-2 text-light'>
+                <div class="d-flex flex-row justify-center">          
+                    <div class="d-flex flex-row justify-center" style="margin-top: 0.3em;">
+                        <img src='./imgs/react-native-logo.webp' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />
+                        <img src='./imgs/redux-toolkit.png' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />
+                        <img src='./imgs/StyleComponents.png' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />
+                        <img src='./imgs/react-navigation.png' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />
+                        <img src='./imgs/axios.png' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />
+                        <img src='./imgs/expo01.png' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />
+                        <img src='./imgs/firebase01.webp' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />
+                        <img src='./imgs/flashmessages.webp' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />
+                          
+                   </div>     
+                </div>  
+               
+        </h3>   
+     </div>
+<!------------------------------------------------------------------------>
+     <div class="col-md-3 py-3 mt-3 project_card mx-auto" id="project4">
+        <a class="nav-link text-center" style="color: beige; cursor: pointer;" href="https://github.com/sergio7174/reactNativeEcommerce01">Project Github Location</a>
+        <div class="project_img text-center d-flex justify-center">
+            <img src= './imgs/nativeEcommerce01.jpg' alt="" class="project_img_size" />   
+        </div>
+        <div class="project_intro mt-4">
+            <h3>🖥️ 📸 📱 🤖 - React-Native Ecommerce</h3> 
+            <h4>A boilerplate for a ecommerce mobile app.</h4> 
+             
+        </div>
+        <h5 class='text-center mx-2 my-3 project_desc'>
+
+            <h5 class='text-center' style="color: aliceblue;">Key Features</h5>
+                <h6 class='text-start' style="line-height:1.5; color: bisque;">
+                    <ul class="m-3">
+                        <li > Cart (List) Add, Remove, Cart Category</li>
+                        <li> Best Selling.</li>
+                        <li> Filters Product Review</li>
+                    </ul>
+                </h6>       
+    
+            </h5>
+    
+            <h6 class='project_tech_hd text-center'>Technology Used</h6>
+            <br/>
+            <h3 class='mb-2 text-light'>
+                <div class="d-flex flex-row justify-center">          
+                    <div class="d-flex flex-row justify-center" style="margin-top: 0.3em;">
+                        <img src='./imgs/react-native-logo.webp' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />
+                        <img src='./imgs/redux-toolkit.png' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />
+                        <img src='./imgs/StyleComponents.png' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />
+                        <img src='./imgs/react-navigation.png' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />
+                        <img src='./imgs/axios.png' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />
+                        <img src='./imgs/expo01.png' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />
+                        
+                          
+                   </div>     
+                </div> 
+            
+            </h3>
+                   
+    </div>
+
+
+
+<!---------------- END REACT NATIVE SECTION ------------------------------->
+</div> <!--- end container projects react-native-->
+
+<!--------------------- ANGULAR SECTION BEGINING -------------------------->
+<br>
+<br>
+<div class="row project_hding text-center" id="angular">
+    <h2 style="color: white; font-size: 2em;"><b> ANGULAR - MEAN STACK</b></h2>
+</div>
+<br>
+<br>
+
+ <!-----PROJECTS SECTION BEGINING CONTAINER -------->
+     
+ <!-----PROJECTS SECTION BEGINING PROJECT 1 CARD -------->
+
+<div class="d-flex flex-row flex-wrap"><!--- begining block react-jsx-->
+    
+    <div class="col-md-3 py-3 mt-3 project_card mx-auto" id="project1">
+        <a class="nav-link text-center" style="color: beige; cursor: pointer;" href="https://github.com/sergio7174/barser">Project Github Location</a>
+        <div class="project_img text-center d-flex justify-center">
+            <img src= './imgs/MeanBar.jpg' alt="" class="project_img_size" />   
+        </div>
+        <div class="project_intro mt-4">
+            <h3>BAR MEAN APLICATION WEBSITE</h3> 
+            <h4>Little Bar Aplication</h4>
+        </div>
+        <h5 class='text-center mx-2 my-3 project_desc'>
+
+            <h5 class='text-center' style="color: aliceblue;">Key Features</h5>
+                <h6 class='text-start' style="line-height:1.5; color: bisque;">
+                    <ul class="m-3">
+                        <li > Add Reservations.</li>
+                        <li>See Drinks Galleries</li>
+                        <li> Get Contacts</li>
+                        <li> Followed best code practices while developing dynamic and reusable code.</li>
+                    </ul>
+                </h6>       
+    
+            </h5>
+    
+            <h6 class='project_tech_hd text-center'>Technology Used</h6>
+            <br/>
+            <h3 class='mb-2 text-light'>
+                <div class="d-flex flex-row justify-center">          
+                    <div class="d-flex flex-row justify-center" style="margin-top: 0.3em;">
+                        <img src='./imgs/angular.png' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />
+                        <img src='./imgs/TYPESCRIPT01.png' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />
+                        <img src='./imgs/node.png' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />
+                        <img src='./imgs/mongo.png' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />
+                        <img src='./imgs/axios.png' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />
+                        <img src='./imgs/mongoose.png' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />
+                        <img src='./imgs/express.png' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />
+                        <img src='./imgs/bootstrap.png' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />  
+                   </div>     
+                </div>            
+            </h3>  
+     </div>
+
+     <div class="col-md-3 py-3 mt-3 project_card mx-auto" id="project2">
+        <a class="nav-link text-center" style="color: beige; cursor: pointer;" href="https://github.com/sergio7174/erentingsystem">Project Github Location</a>
+        <div class="project_img text-center d-flex justify-center">
+            <img src= './imgs/project007Angular.jpg' alt="" class="project_img_size" />   
+        </div>
+        <div class="project_intro mt-4">
+            <h3> 🏡 RENTING SYSTEM  WEBSITE</h3> 
+            <h4>MEAN APLICATION, dynamic E RENTING rooms, houses. </h4>
+        </div>
+        <h5 class='text-center mx-2 my-3 project_desc'>
+
+            <h5 class='text-center' style="color: aliceblue;">Key Features</h5>
+                <h6 class='text-start' style="line-height:1.5; color: bisque;">
+                    <ul class="m-3">
+                        <li > User registration and login.</li>
+                        <li> LandLord Area</li>
+                        <li> Room List, and More.</li>
+                    </ul>
+                </h6>       
+    
+            </h5>
+    
+            <h6 class='project_tech_hd text-center'>Technology Used</h6>
+            <br/>
+            <h3 class='mb-2 text-light'>
+                <div class="d-flex flex-row justify-center">          
+                    <div class="d-flex flex-row justify-center" style="margin-top: 0.3em;">
+                        <img src='./imgs/angular.png' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />
+                        <img src='./imgs/TYPESCRIPT01.png' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />
+                        <img src='./imgs/node.png' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />
+                        <img src='./imgs/mongo.png' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />
+                        <img src='./imgs/axios.png' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />
+                        <img src='./imgs/mongoose.png' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />
+                        <img src='./imgs/express.png' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />
+                        <img src='./imgs/bootstrap.png' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />
+                          
+                   </div>     
+                </div>      
+            </h3>       
+                      
+     </div>     
+     
+   <!------------------------------------------------------------------------->  
+
+     <div class="col-md-3 py-3 mt-3 project_card mx-auto" id="project3">
+        <a class="nav-link text-center" style="color: beige; cursor: pointer;" href="https://github.com/sergio7174/furnitureShop">Project Github Location</a>
+        <div class="project_img text-center d-flex justify-center">
+            <img src= './imgs/project008AngularFurnitureShop.jpg' alt="" class="project_img_size" />   
+        </div>
+        <div class="project_intro mt-4">
+            <h3>🚪🛏️ FURNITURE SHOP WEBSITE</h3> 
+            <h4>dynamic ECOMMERCE FURNITURE SHOP website </h4>
+            
+        </div>
+        <h5 class='text-center mx-2 my-3 project_desc'>
+
+            <h5 class='text-center' style="color: aliceblue;">Key Features</h5>
+                <h6 class='text-start' style="line-height:1.5; color: bisque;">
+                    <ul class="m-3">
+                        <li> Admin Area.</li>
+                        <li > Add/Edit/Delete Products, Users and Staff.</li>
+                        <li> See Product List</li>
+                        <li> Followed best code practices while developing dynamic 
+                             and reusable code.</li>
+                    </ul>
+                </h6>       
+    
+            </h5>
+    
+            <h6 class='project_tech_hd text-center'>Technology Used</h6>
+            <br/>
+            <h3 class='mb-2 text-light'>
+                <div class="d-flex flex-row justify-center">          
+                    <div class="d-flex flex-row justify-center" style="margin-top: 0.3em;">
+                        <img src='./imgs/angular.png' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />
+                        <img src='./imgs/TYPESCRIPT01.png' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />
+                        <img src='./imgs/node.png' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />
+                        <img src='./imgs/mongo.png' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />
+                        <img src='./imgs/axios.png' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />
+                        <img src='./imgs/mongoose.png' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />
+                        <img src='./imgs/express.png' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />
+                        <img src='./imgs/bootstrap.png' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />
+                          
+                   </div>     
+                </div>  
+               
+        </h3>   
+     </div>
+<!------------------------------------------------------------------------>
+     <div class="col-md-3 py-3 mt-3 project_card mx-auto" id="project4">
+        <a class="nav-link text-center" style="color: beige; cursor: pointer;" href="https://github.com/sergio7174/photoGallery">Project Github Location</a>
+        <div class="project_img text-center d-flex justify-center">
+            <img src= './imgs/project009AngularPhotoGallery.jpg' alt="" class="project_img_size" />   
+        </div>
+        <div class="project_intro mt-4">
+            <h3> 📸+🤨 PHOTO GALLERY WEBSITE</h3> 
+            <h4>MEAN - dynamic PHOTO GALLERY</h4> 
+             
+        </div>
+        <h5 class='text-center mx-2 my-3 project_desc'>
+
+            <h5 class='text-center' style="color: aliceblue;">Key Features</h5>
+                <h6 class='text-start' style="line-height:1.5; color: bisque;">
+                    <ul class="m-3">
+                        <li > upload, Add/Edit/Delete Photos.</li>
+                        <li> User Authenication.</li>
+                        <li> Create Photo Albums.</li>
+                        <li> Add photos to each Album.</li>
+                    </ul>
+                </h6>       
+    
+            </h5>
+    
+            <h6 class='project_tech_hd text-center'>Technology Used</h6>
+            <br/>
+            <h3 class='mb-2 text-light'>
+                <div class="d-flex flex-row justify-center">          
+                    <div class="d-flex flex-row justify-center" style="margin-top: 0.3em;">
+                        <img src='./imgs/angular.png' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />
+                        <img src='./imgs/TYPESCRIPT01.png' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />
+                        <img src='./imgs/node.png' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />
+                        <img src='./imgs/mongo.png' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />
+                        <img src='./imgs/axios.png' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />
+                        <img src='./imgs/mongoose.png' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />
+                        <img src='./imgs/express.png' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />
+                        <img src='./imgs/bootstrap.png' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" /> 
+                          
+                   </div>     
+                </div> 
+            
+            </h3>
+                   
+    </div>
+</div>
+
+
+
+<!--------------------- ANGULAR SECTION end -------------------------->
+<!--------------------- NODEJS SECTION BEGINING -------------------------->
+<br>
+<br>
+<div class="row project_hding text-center" id="nodejs">
+    <h2 style="color: white; font-size: 2em;"><b> NODEJS - SECTION</b></h2>
+</div>
+<br>
+<br>
+
+ <!-----PROJECTS SECTION BEGINING CONTAINER -------->
+     
+ <!-----PROJECTS SECTION BEGINING PROJECT 1 CARD -------->
+
+<div class="d-flex flex-row flex-wrap"><!--- begining block react-jsx-->
+    
+    <div class="col-md-3 py-3 mt-3 project_card mx-auto" id="project1">
+        <a class="nav-link text-center" style="color: beige; cursor: pointer;" href="https://github.com/sergio7174/bookAditsSer">Project Github Location</a>
+        <div class="project_img text-center d-flex justify-center">
+            <img src= './imgs/NodeBooksAditts.jpg' alt="" class="project_img_size" />   
+        </div>
+        <div class="project_intro mt-4">
+            <h3>📚📒 Book Addits WEBSITE</h3> 
+            <h4>An aplication for searching and selling books</h4>
+        </div>
+        <h5 class='text-center mx-2 my-3 project_desc'>
+
+            <h5 class='text-center' style="color: aliceblue;">Key Features</h5>
+                <h6 class='text-start' style="line-height:1.5; color: bisque;">
+                    <ul class="m-3">
+                        <li > User registration and login.</li>
+                        <li>Add, edit, delete books</li>
+                        <li> Live Search</li>
+                        <li> Responsive Design</li>
+                        <li> Followed best code practices while developing dynamic and reusable code.</li>
+                    </ul>
+                </h6>       
+    
+            </h5>
+    
+            <h6 class='project_tech_hd text-center'>Technology Used</h6>
+            <br/>
+            <h3 class='mb-2 text-light'>
+                <div class="d-flex flex-row justify-center">          
+                    <div class="d-flex flex-row justify-center" style="margin-top: 0.3em;">
+                       
+                        <img src='./imgs/javascript.png' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />
+                        <img src='./imgs/node.png' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />
+                        <img src='./imgs/mongo.png' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />
+                        <img src='./imgs/axios.png' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />
+                        <img src='./imgs/mongoose.png' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />
+                        <img src='./imgs/express.png' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />
+                        <img src='./imgs/bootstrap.png' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />
+                        <img src='./imgs/ejs02.gif' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />  
+                   </div>     
+                </div>            
+            </h3>  
+     </div>
+
+     <div class="col-md-3 py-3 mt-3 project_card mx-auto" id="project2">
+        <a class="nav-link text-center" style="color: beige; cursor: pointer;" href="https://github.com/sergio7174/fibonaser">Project Github Location</a>
+        <div class="project_img text-center d-flex justify-center">
+            <img src= './imgs/project0013nodejsFibonnacci.jpg' alt="" class="project_img_size" />   
+        </div>
+        <div class="project_intro mt-4">
+            <h3>🎒📚 Fibona  WEBSITE</h3> 
+            <h4>MEAN APLICATION,open source Students AI </h4>
+        </div>
+        <h5 class='text-center mx-2 my-3 project_desc'>
+
+            <h5 class='text-center' style="color: aliceblue;">Key Features</h5>
+                <h6 class='text-start' style="line-height:1.5; color: bisque;">
+                    <ul class="m-3">
+                        <li > User registration and login.</li>
+                        <li> Add, edit, delete subjects</li>
+                        <li> Live Search</li>
+                    </ul>
+                </h6>       
+    
+            </h5>
+    
+            <h6 class='project_tech_hd text-center'>Technology Used</h6>
+            <br/>
+            <h3 class='mb-2 text-light'>
+                <div class="d-flex flex-row justify-center">          
+                    <div class="d-flex flex-row justify-center" style="margin-top: 0.3em;">
+                        <img src='./imgs/angular.png' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />
+                        <img src='./imgs/TYPESCRIPT01.png' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />
+                        <img src='./imgs/node.png' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />
+                        <img src='./imgs/mongo.png' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />
+                        <img src='./imgs/axios.png' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />
+                        <img src='./imgs/mongoose.png' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />
+                        <img src='./imgs/express.png' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />
+                        <img src='./imgs/bootstrap.png' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />
+                          
+                   </div>     
+                </div>      
+            </h3>       
+                      
+     </div>     
+     
+   <!------------------------------------------------------------------------->  
+
+     <div class="col-md-3 py-3 mt-3 project_card mx-auto" id="project3">
+        <a class="nav-link text-center" style="color: beige; cursor: pointer;" href="https://github.com/sergio7174/serfoundation">Project Github Location</a>
+        <div class="project_img text-center d-flex justify-center">
+            <img src= './imgs/project014NodejsSerFoundation.jpg' alt="" class="project_img_size" />   
+        </div>
+        <div class="project_intro mt-4">
+            <h3> Ser Foundation WEBSITE</h3> 
+            <h4>Fullstack open source application,</h4>
+            <h4>dynamic website with features</h4> 
+            <h4>like opportunities portal,
+                blog portal, </h4>
+            <h4>admin dashboard, authentication and more. </h4>
+            
+        </div>
+        <h5 class='text-center mx-2 my-3 project_desc'>
+
+            <h5 class='text-center' style="color: aliceblue;">Key Features</h5>
+                <h6 class='text-start' style="line-height:1.5; color: bisque;">
+                    <ul class="m-3">
+                        <li> Admin Area.</li>
+                        <li > Add/Edit/Delete Post and Users.</li>
+                        <li> Create opportunities by category.</li>
+                        <li> Followed best code practices while developing dynamic and reusable code.</li>
+                    </ul>
+                </h6>       
+    
+            </h5>
+    
+            <h6 class='project_tech_hd text-center'>Technology Used</h6>
+            <br/>
+            <h3 class='mb-2 text-light'>
+                <div class="d-flex flex-row justify-center">          
+                    <div class="d-flex flex-row justify-center" style="margin-top: 0.3em;">
+                        <img src='./imgs/angular.png' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />
+                        <img src='./imgs/TYPESCRIPT01.png' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />
+                        <img src='./imgs/node.png' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />
+                        <img src='./imgs/mongo.png' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />
+                        <img src='./imgs/axios.png' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />
+                        <img src='./imgs/mongoose.png' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />
+                        <img src='./imgs/express.png' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />
+                        <img src='./imgs/bootstrap.png' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />
+                          
+                   </div>     
+                </div>  
+               
+        </h3>   
+     </div>
+<!------------------------------------------------------------------------>
+     <div class="col-md-3 py-3 mt-3 project_card mx-auto" id="project4">
+        <a class="nav-link text-center" style="color: beige; cursor: pointer;" href="https://github.com/sergio7174/serlink">Project Github Location</a>
+        <div class="project_img text-center d-flex justify-center">
+            <img src= './imgs/NodeLink.jpg' alt="" class="project_img_size" />   
+        </div>
+        <div class="project_intro mt-4">
+            <h3>  Ser Link WEBSITE</h3> 
+            <h4>A business inventory management system </h4> 
+             
+        </div>
+        <h5 class='text-center mx-2 my-3 project_desc'>
+
+            <h5 class='text-center' style="color: aliceblue;">Key Features</h5>
+                <h6 class='text-start' style="line-height:1.5; color: bisque;">
+                    <ul class="m-3">
+                        <li > Admin Mode, seller mode, manager mode.</li>
+                        <li> Add , edit, delete, products, services.</li>
+                        <li> See Monthly Sells, Services, Entries, Outputs.</li>
+                        <li> See Stadictics about sells, Services, Entries, Outputs.</li>
+                    </ul>
+                </h6>       
+    
+            </h5>
+    
+            <h6 class='project_tech_hd text-center'>Technology Used</h6>
+            <br/>
+            <h3 class='mb-2 text-light'>
+                <div class="d-flex flex-row justify-center">          
+                    <div class="d-flex flex-row justify-center" style="margin-top: 0.3em;">
+                       
+                        <img src='./imgs/node.png' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />
+                        <img src='./imgs/mongo.png' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />
+                        <img src='./imgs/axios.png' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />
+                        <img src='./imgs/mongoose.png' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />
+                        <img src='./imgs/express.png' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />
+                        <img src='./imgs/bootstrap.png' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" /> 
+                          
+                   </div>     
+                </div> 
+            
+            </h3>
+                   
+    </div>
+<!---------------------------------------------------------------------------->
+<!------------------------------------------------------------------------>
+<div class="col-md-3 py-3 mt-3 project_card mx-auto" id="project5">
+    <a class="nav-link text-center" style="color: beige; cursor: pointer;" href="https://github.com/sergio7174/videostream">Project Github Location</a>
+    <div class="project_img text-center d-flex justify-center">
+        <img src= './imgs/project004ReactYoutubeclone.jpg' alt="" class="project_img_size" />   
+    </div>
+    <div class="project_intro mt-4">
+        <h3>  📽️ Video Stream WEBSITE</h3> 
+        <h4>Video Streaming SYSTEM </h4> 
+         
+    </div>
+    <h5 class='text-center mx-2 my-3 project_desc'>
+
+        <h5 class='text-center' style="color: aliceblue;">Key Features</h5>
+            <h6 class='text-start' style="line-height:1.5; color: bisque;">
+                <ul class="m-3">
+                    <li > Authentication: 👓 User sign up and login with email and password.</li>
+                    <li> Add , edit, delete, products, services.</li>
+                    <li> Upload Videos to private Channel.</li>
+                    <li> Add likes and commnets, to videos.</li>
+                </ul>
+            </h6>       
+
+        </h5>
+
+        <h6 class='project_tech_hd text-center'>Technology Used</h6>
+        <br/>
+        <h3 class='mb-2 text-light'>
+            <div class="d-flex flex-row justify-center">          
+                <div class="d-flex flex-row justify-center" style="margin-top: 0.3em;">
+                   
+                    <img src='./imgs/node.png' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />
+                    <img src='./imgs/mongo.png' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />
+                    <img src='./imgs/axios.png' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />
+                    <img src='./imgs/mongoose.png' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />
+                    <img src='./imgs/express.png' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" />
+                    <img src='./imgs/bootstrap.png' alt="" style="width:1.8em; height:auto;  margin-right: 0.2em;" /> 
+                      
+               </div>     
+            </div> 
+        
+        </h3>
+               
+</div>
+<!---------------------------------------------------------------------------->
+
+
+
+<!--------------------- NODEJS SECTION ENDING ------------------------------>
+</div>  <!-----PROJECTS SECTION END CONTAINER ------------------------------>
+<!-------------------------PROJECTS SECTION END BLOCK ---------------------->
+<!------------------- TOTOP  BEGIN SECTION --------------------------------->
+
+<div class="totop_container" id="totop" style="overflow-x:hidden">
+    <a href="#page_top">
+        <i title="TO TOP" class="fa-solid fa-angles-up"></i> 
+    </a>
+</div>
+
+
+<!-------------------- TOTOP SECTION END ----------------------------------->
+<!-------------------- FOOTER SECTION BEGINING BLOCK ----------------------->
+
+<div class="container-fluid footer_bg" style= 'overflow-x: hidden'>
+                
+    <div class="row pt-4 mb-4">
+        <div class="col-md-2 mx-auto justify-content-center text-center">
+            <img src='./imgs/logo.jpg' alt="" class="footer_logo_size" id="footer_img" />
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="col-md-5 footer_text d-flex flex-wrap justify-content-around mx-auto text-center" id="footer_text">
+            <div class='mx-auto'> <i class="fa-solid fa-envelope"></i> sergiogmoncada@yahoo.com</div>
+            <div class='mx-auto'> <i class="fa-solid fa-phone me-1"></i> +58 4124889099 - +58 4129403149</div>
+        </div>
+    </div>
+
+    <div class="row pb-4">
+        <div class="col-md-3 d-flex justify-content-around footer_social mx-auto ">
+            
+            
+            
+            <div> <a href="https://www.linkedin.com/in/sergio-moncada-72589883/" target="_blank"><i title="Linkedin" class="fa-brands fa-linkedin"></i></a> </div>
+            
+            <div> <a href="mailto: sergiogmoncada@yahoo.com"><i title="G-Mail" class="fa-solid fa-envelope-open"></i></a> </div>
+            
+            <div> <a href="tel: +58 4124889099" target="_blank"><i title="Call" class="fa-solid fa-phone"></i></a> </div>
+            
+            <div> <a href="https://wa.me/+584124889099" target="_blank"><i title="What's App" class="fa-brands fa-whatsapp"></i></a> </div>
+        
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid footer2_bg py-1" style="overflow-x:hidden">
+    <div class="row text-center">
+        <h6 style="color: #7b7f92"> Designed & Developed by Sergio Moncada 
+            <i class="fa-regular fa-hand-peace"></i>. 
+        </h6>
+    </div>
+</div>
+
+
+
+
+
+
+<!-------------------------FOOTER SECTION END BLOCK ------------------------>
+
+</body>
+</html>
